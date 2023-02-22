@@ -1,0 +1,2 @@
+# zkwasm-docs
+ZKWasm Documentation
