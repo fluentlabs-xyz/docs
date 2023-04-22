@@ -14,7 +14,3 @@
 ## ZKWasm Dictionary
 
 * [Wasm(0) Wikipedia](zkwasm-dictionary/wasm-0-wikipedia.md)
-
-## Copy of Group 1
-
-* [Wasm(0) Wikipedia](copy-of-group-1/wasm-0-wikipedia.md)
