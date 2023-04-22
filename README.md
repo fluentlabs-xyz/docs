@@ -6,7 +6,7 @@ description: Scaling Blockchains Towards Mainstream Adoption
 
 ## What is Wasm(0)?
 
-Wasm(0) is a blockchain platform that functions as a Layer 2 solution and replicates the [WebAssembly](broken-reference) environment. By utilizing the properties of [ZK-based](broken-reference) roll-up mechanisms, such as zkEVM, Wasm(0) can aggregate multiple transactions into a single proof without compromising the security of the blockchain. This approach improves the blockchain's throughput, allowing for greater scalability.&#x20;
+Wasm(0) is a blockchain platform that functions as a Layer 2 solution and replicates the [WebAssembly](zkwasm-dictionary/wasm-0-wikipedia.md#webassembly) environment. By utilizing the properties of [ZK-based](zkwasm-dictionary/wasm-0-wikipedia.md#zero-knowledge) roll-up mechanisms, such as zkEVM, Wasm(0) can aggregate multiple transactions into a single proof without compromising the security of the blockchain. This approach improves the blockchain's throughput, allowing for greater scalability.&#x20;
 
 The main goal of Wasm(0) is to enable the seamless integration of libraries and applications that utilize WASM technology into the blockchain ecosystem. By leveraging the advantages of Layer 2, Wasm(0) can connect traditional WASM-based communities such as web, gaming, socials,  and more, with dApps running on the blockchain. This integration opens up new possibilities for developers and users in the Web3 world.
 
