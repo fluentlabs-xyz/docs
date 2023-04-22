@@ -14,3 +14,8 @@
 ## ZKWasm Dictionary
 
 * [Wasm(0) Wikipedia](zkwasm-dictionary/wasm-0-wikipedia.md)
+
+## Get Involved
+
+* [Roadmap](get-involved/roadmap.md)
+* [Become an Early Adopter](get-involved/become-an-early-adopter.md)
