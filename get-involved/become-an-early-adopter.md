@@ -1,3 +1,7 @@
+---
+description: Signup for the Waitlist
+---
+
 # Become an Early Adopter
 
 ### Be among the first to build on Wasm0 <a href="#e755" id="e755"></a>
