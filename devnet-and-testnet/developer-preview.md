@@ -4,7 +4,7 @@ description: Wasm0 Developer Preview 01
 
 # Developer Preview
 
-This is a preliminary developer version of the WASM-0 chain explicitly designed for deploying and interacting with WASM-based smart contracts, utilizing a compatible go-Ethereum execution environment.
+This is a preliminary developer version of the Wasm0 chain explicitly designed for deploying and interacting with Wasm-based smart contracts, utilizing a compatible go-Ethereum execution environment.
 
 {% hint style="danger" %}
 As an early-stage release, it should be noted that this version of the service might be highly unstable and prone to numerous bugs and errors.
@@ -14,12 +14,12 @@ As an early-stage release, it should be noted that this version of the service m
 
 **Network params:**
 
-* **Network name**: WASM-0 Developer Preview
+* **Network name**: Wasm0 Developer Preview
 * **RPC URL**: [https://rpc.devnet.wasm0.io/](https://rpc.devnet.wasm0.io/)
 * **Chain ID**: 99
 * **Symol**: WZT
 
-Here are links to WASM-0 developer preview resources:
+Here are links to Wasm0 developer preview resources:
 
 * **Faucet**: [https://faucet.devnet.wasm0.io/](https://faucet.devnet.wasm0.io/)
 * **RPC**: [https://rpc.devnet.wasm0.io/](https://rpc.devnet.wasm0.io/)
