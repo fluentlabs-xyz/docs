@@ -9,7 +9,7 @@
 
 * [Building with WebAssembly](deep-dive/building-with-webassembly/README.md)
   * [Wasm0 Litepaper](https://wasm0.io/litepaper.pdf)
-* [Why Wasm in ZKVM?](deep-dive/why-wasm-in-zkvm.md)
+* [Why Wasm in zkVM?](deep-dive/why-wasm-in-zkvm.md)
 
 ## ZKWasm Research
 
