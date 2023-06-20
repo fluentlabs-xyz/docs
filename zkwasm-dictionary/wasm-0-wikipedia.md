@@ -1,8 +1,8 @@
 ---
-description: Short descriptions of Wasm(0) keywords referring to specific concepts
+description: Short descriptions of Wasm0 keywords referring to specific concepts
 ---
 
-# Wasm(0) Wikipedia
+# Wasm0 Wikipedia
 
 ### Binary-format
 
@@ -68,7 +68,7 @@ This can be useful for maintaining privacy and security in situations where sens
 
 Zero Knowledge protocols use complex mathematical algorithms to ensure that the proof is valid and that the information remains confidential.
 
-### ZKEVM
+### zkEVM
 
 (_Zero Knowledge Ethereum Virtual Machine_)
 
@@ -76,11 +76,11 @@ The Ethereum Virtual Machine (EVM) is the runtime environment that executes smar
 
 zkEVM is a modified version of the EVM that incorporates zero-knowledge proof systems, which allow smart contracts to be executed with greater privacy and security. With zkEVM, smart contracts can perform complex computations without revealing the underlying data to the network or to third parties.
 
-### ZKWasm
+### zkWasm
 
 ([_Zero Knowledge_](wasm-0-wikipedia.md#zero-knowledge) [_WebAssembly_](wasm-0-wikipedia.md#webassembly))
 
-ZKWasm is a new architecture that combines the benefits of Zero Knowledge proof systems with the WebAssembly (WASM) framework.
+zkWasm is a new architecture that combines the benefits of Zero Knowledge proof systems with the WebAssembly (Wasm) framework.
 
 By combining these two technologies, zkWasm promises to provide a secure and private way to run decentralized applications (dApps) on the blockchain.
 
