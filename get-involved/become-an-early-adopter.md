@@ -10,4 +10,4 @@ Lead the charge in blockchain mass adoption by building high-performance, intero
 
 **Join the waitlist** → [typeform.com/wasm0](https://4f4a8balgjw.typeform.com/wasm0?typeform-source=wasm0.io)
 
-<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (43).png" alt=""><figcaption></figcaption></figure>
