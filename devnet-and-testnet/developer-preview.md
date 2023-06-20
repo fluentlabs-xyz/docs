@@ -1,5 +1,5 @@
 ---
-description: WASM-0 Developer Preview 01
+description: Wasm0 Developer Preview 01
 ---
 
 # Developer Preview
