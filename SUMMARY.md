@@ -43,7 +43,7 @@
   * [Summary: aPlonk](zkwasm-research/aplonk-aggregated-plonk/summary-aplonk.md)
   * [References](zkwasm-research/aplonk-aggregated-plonk/references.md)
 * [SHPlonk in Halo2](zkwasm-research/shplonk-in-halo2/README.md)
-  * [Background](zkwasm-research/shplonk-in-halo2/background.md)
+  * [Plonkish Protocols](zkwasm-research/shplonk-in-halo2/plonkish-protocols.md)
 
 ## DevNet & TestNet
 
