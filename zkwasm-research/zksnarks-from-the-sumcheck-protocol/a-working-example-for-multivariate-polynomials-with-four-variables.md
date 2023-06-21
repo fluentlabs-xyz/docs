@@ -34,11 +34,11 @@ where 𝐶 ∈ 𝔽 and the protocol advances through the subsequent stages. In 
 
 The calculation which is made at **round 1** shows that the prover computes:
 
-<figure><img src="../../.gitbook/assets/image (15).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (15) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### The verifier checks:
 
-<figure><img src="../../.gitbook/assets/image (12).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (12) (1).png" alt=""><figcaption></figcaption></figure>
 
 Let the verifier send the challenge 𝑏1 ∈ 𝔽. Then the polynomial at **round 2** would be described as follows.
 

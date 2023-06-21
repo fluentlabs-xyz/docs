@@ -45,6 +45,7 @@
 * [SHPlonk in Halo2](zkwasm-research/shplonk-in-halo2/README.md)
   * [Plonkish Protocols](zkwasm-research/shplonk-in-halo2/plonkish-protocols.md)
   * [KZG10 Commitment Scheme](zkwasm-research/shplonk-in-halo2/kzg10-commitment-scheme.md)
+  * [Batching with KZG](zkwasm-research/shplonk-in-halo2/batching-with-kzg.md)
 
 ## DevNet & TestNet
 

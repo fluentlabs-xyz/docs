@@ -21,7 +21,7 @@ It has the following properties:
 * **Constant size:** the commitment value is independent of the length of the committed input vector.
 * **Doubly homomorphic:** both in the message and the key space. More concretely,
 
-<figure><img src="../../.gitbook/assets/image (54).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (54) (1).png" alt=""><figcaption></figcaption></figure>
 
 * **Collapsing property:** it allows to calculate
 

@@ -16,7 +16,7 @@ To understand Nova better, it is essential to understand IVC. IVC is a technique
 
 Nova takes incremental computations, where each step is an [R1CS](understanding-r1cs-rank-one-constraint-systems.md#what-is-r1cs); the constraint system includes a verification circuit, which has to check the correctness of the execution of the last step. However, instead of verifying the proof <img src="../../.gitbook/assets/Screenshot 2023-04-25 213940 (1).png" alt="" data-size="line">, Nova sees it as an R1CS case and folds it into a current relaxed R1CS. To do this, we have to modify the R1CS to add an error term 𝐸 and a scalar 𝑢 to get a relaxed R1CS, which we can use to make an efficient folding scheme:
 
-<figure><img src="../../.gitbook/assets/image (14).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (14) (1).png" alt=""><figcaption></figcaption></figure>
 
 If 𝐸 is the zero vector and 𝑢 = 1, then we have 𝐴𝑧 × 𝐵𝑧 = 𝐶𝑧. Namely, any R1CS can also be seen as a relaxed R1CS. Relaxed R1CS keeps the property that it is NP-complete, which means that we can change any NP problem to it. We want the folding scheme to combine two cases of R1CS with the same matrices 𝐴, 𝐵, 𝐶 into one case. Each R1CS has its own instance-witness pairs (that is, public and private data), 𝑧𝑖 = (𝑤𝑖 , 𝑥𝑖), and we want to make a new 𝑧 = (𝑤, 𝑥) that meets the R1CS system of equations with 𝐴, 𝐵, 𝐶, such that this also means that each 𝑧𝑖 = (𝑤𝑖 , 𝑥𝑖) does so. One way to do this is by having the verifier pick a random 𝑟 and do the following change:
 

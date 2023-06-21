@@ -1,6 +1,6 @@
 # Multi-Polynomial Commitment Scheme
 
-Developing a multi-polynomial commitment scheme presents a significant obstacle in achieving a commitment size and verification that is sublinear in the number of committed polynomials. The starting point for this method is the KZG polynomial commitment scheme, which is defined over a set of bilinear groups <img src="../../.gitbook/assets/image (67).png" alt="" data-size="line">of prime order 𝑝 that are equipped with a pairing 𝑒. For each 𝑖 in the set {1, 2, 𝑡}, we utilize the implicit notation <img src="../../.gitbook/assets/image (53).png" alt="" data-size="line"> to represent 𝑥𝐺𝑖 ∈ 𝔾𝑖, where 𝐺𝑖 is the designated generator of 𝔾𝑖 and 𝑥 belongs to the set of integers modulo 𝑝.
+Developing a multi-polynomial commitment scheme presents a significant obstacle in achieving a commitment size and verification that is sublinear in the number of committed polynomials. The starting point for this method is the KZG polynomial commitment scheme, which is defined over a set of bilinear groups <img src="../../.gitbook/assets/image (67).png" alt="" data-size="line">of prime order 𝑝 that are equipped with a pairing 𝑒. For each 𝑖 in the set {1, 2, 𝑡}, we utilize the implicit notation <img src="../../.gitbook/assets/image (53) (1).png" alt="" data-size="line"> to represent 𝑥𝐺𝑖 ∈ 𝔾𝑖, where 𝐺𝑖 is the designated generator of 𝔾𝑖 and 𝑥 belongs to the set of integers modulo 𝑝.
 
 The KZG commitment scheme is as follows:
 
