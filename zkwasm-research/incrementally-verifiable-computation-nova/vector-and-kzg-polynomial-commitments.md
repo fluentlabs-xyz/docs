@@ -12,13 +12,13 @@ Vector commitments allow a user to commit to a vector of values and later prove 
 
 ## What are KZG Polynomial Commitments?
 
-A polynomial commitment scheme is a cryptographic primitive that allows one to commit to a given polynomial while keeping it hidden from others, with the ability to reveal the committed polynomial later. It is also possible to verify claimed evaluations of the committed polynomial without revealing the whole polynomial.&#x20;
+A polynomial commitment scheme is a cryptographic primitive that allows one to commit to a given polynomial while keeping it hidden from others, with the ability to reveal the committed polynomial later. It is also possible to verify claimed evaluations of the committed polynomial without revealing the whole polynomial.
 
 KZG polynomial commitments are a specific type of polynomial commitment scheme that uses pairings and polynomial commitments to verify the validity of a degree 𝑛 polynomial using 𝑛 queries. They are based on vector commitments and can be seen as a special case of them. The final construction has a small verifier circuit (about 20,000 constraints in R1CS), making proof generation and verification fast.
 
 ### Additive Homomorphism and Succinctness
 
-A polynomial commitment scheme must be additively homomorphic to support operations on committed vectors.&#x20;
+A polynomial commitment scheme must be additively homomorphic to support operations on committed vectors.
 
 Given two variables 𝑎, 𝑏, we say that the commitment is additively homomorphic if:
 
@@ -26,11 +26,9 @@ $$
 𝑐𝑜𝑚(𝑎 + 𝑏) = 𝑐𝑜𝑚(𝑎) + 𝑐𝑜𝑚(𝑏)
 $$
 
-, where 𝑐𝑜𝑚(𝑥) is the commitment of 𝑥.&#x20;
+, where 𝑐𝑜𝑚(𝑥) is the commitment of 𝑥.
 
-Both KZG and Pedersen commitments are additively homomorphic. Furthermore, the communication and computation costs for the verifier are constant, which allows blockchain nodes to function without extra burden.&#x20;
+Both KZG and Pedersen commitments are additively homomorphic. Furthermore, the communication and computation costs for the verifier are constant, which allows blockchain nodes to function without extra burden.
 
 The other important property of a polynomial commitment scheme is succinctness, which means the commitment size must be logarithmic in the opening size. For example, if we have a degree 𝑛 polynomial, its commitment should use at most 𝑙𝑜𝑔(𝑛) elements.
 
-\
-\
