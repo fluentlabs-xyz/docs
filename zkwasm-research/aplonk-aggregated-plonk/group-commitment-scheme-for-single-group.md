@@ -7,7 +7,7 @@ SnarkPack introduces and utilizes a group commitment scheme as follows.
 1. Generate <img src="../../.gitbook/assets/image (52).png" alt="" data-size="line">
 2. Calculate the following 𝑛-dimensional vectors:
 
-<figure><img src="../../.gitbook/assets/image (32).png" alt="" width="371"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (33).png" alt="" width="371"><figcaption></figcaption></figure>
 
 ## Commitment:
 
@@ -15,13 +15,13 @@ SnarkPack introduces and utilizes a group commitment scheme as follows.
 
 ### Properties
 
-It has the following properties:&#x20;
+It has the following properties:
 
 * **Computationally binding:** it guarantees that the sender cannot change the input vector (or the statement) after committing to it, except with negligible probability.
 * **Constant size:** the commitment value is independent of the length of the committed input vector.
 * **Doubly homomorphic:** both in the message and the key space. More concretely,
 
-<figure><img src="../../.gitbook/assets/image (53).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (54).png" alt=""><figcaption></figcaption></figure>
 
 * **Collapsing property:** it allows to calculate
 

@@ -22,7 +22,7 @@ Let's say we have an execution trace that is represented as a vector. To demonst
 
 We can think of the first column of the table as the finite field elements, and the second column as the interpolation process where we use the Lagrange interpolation to interpolate the values.
 
-<figure><img src="../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
 
 where the Lagrange base polynomials defined in a binary field are represented by 𝑋 and 1 − 𝑋. The Multi-Linear Extension of a vector is a special polynomial denoted as 𝐹(𝑋4𝑋₃, 𝑋₂, 𝑋₁), which is constructed using these polynomials. In this scenario, the Sumcheck problem is defined as follows:
 
@@ -38,7 +38,7 @@ The calculation which is made at **round 1** shows that the prover computes:
 
 ### The verifier checks:
 
-<figure><img src="../../.gitbook/assets/image (11).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (12).png" alt=""><figcaption></figcaption></figure>
 
 Let the verifier send the challenge 𝑏1 ∈ 𝔽. Then the polynomial at **round 2** would be described as follows.
 
@@ -50,4 +50,4 @@ Let the verifier send the challenge 𝑏2 ∈ 𝔽. Then the polynomial at **rou
 
 Let the verifier send the challenge 𝑏3 ∈ 𝔽. Then the polynomial at **round 4** would be described as:
 
-<figure><img src="../../.gitbook/assets/image (67).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (68).png" alt=""><figcaption></figcaption></figure>
