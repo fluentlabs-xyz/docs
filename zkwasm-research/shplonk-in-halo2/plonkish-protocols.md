@@ -13,8 +13,8 @@ Plonkish protocols, generally, look like this:
 
 <figure><img src="../../.gitbook/assets/SHplonk.png" alt=""><figcaption></figcaption></figure>
 
-The equations are usually meant to apply to the polynomials and their rotations, where <img src="../../.gitbook/assets/image (22).png" alt="" data-size="line"> and μ is a primitive root of unity of order 𝑛. Therefore, in general, to verify these equations, the verifier chooses a challenge point 𝑥 and prover reveals the values of the polynomials <img src="../../.gitbook/assets/image (29).png" alt="" data-size="line"> at points <img src="../../.gitbook/assets/image (23).png" alt="" data-size="line"> for <img src="../../.gitbook/assets/image (13).png" alt="" data-size="line"> where <img src="../../.gitbook/assets/image (11).png" alt="" data-size="line"> is the set of all rotated versions of <img src="../../.gitbook/assets/image (29).png" alt="" data-size="line"> in the constraint.
+The equations are usually meant to apply to the polynomials and their rotations, where <img src="../../.gitbook/assets/image (7).png" alt="" data-size="line"> and μ is a primitive root of unity of order 𝑛. Therefore, in general, to verify these equations, the verifier chooses a challenge point 𝑥 and prover reveals the values of the polynomials <img src="../../.gitbook/assets/image (22).png" alt="" data-size="line"> at points <img src="../../.gitbook/assets/image (13).png" alt="" data-size="line"> for <img src="../../.gitbook/assets/image (4).png" alt="" data-size="line"> where <img src="../../.gitbook/assets/image (1).png" alt="" data-size="line"> is the set of all rotated versions of <img src="../../.gitbook/assets/image (22).png" alt="" data-size="line"> in the constraint.
 
 ## Notations
 
-<figure><img src="../../.gitbook/assets/shplonk-notation (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/shplonk-notation.png" alt=""><figcaption></figcaption></figure>

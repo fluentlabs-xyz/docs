@@ -19,4 +19,4 @@ Commitment schemes can be categorized according to their mathematical structure 
 * For a vector of messages<img src="../../.gitbook/assets/image (57).png" alt="" data-size="line">, a Merkle Tree can be used as the commitment primitive.
 * For univariate polynomial messages <img src="../../.gitbook/assets/image (56).png" alt="" data-size="line">, Kate Polynomial commitment can be employed.
 * For multivariate polynomial messages <img src="../../.gitbook/assets/image (50).png" alt="" data-size="line">, Multivariate Polynomial commitment can serve as the primitive commitment.
-* For multilinear polynomial maps <img src="../../.gitbook/assets/image (6).png" alt="" data-size="line">, Multilinear Polynomial commitment can be used as the primitive commitment.
+* For multilinear polynomial maps <img src="../../.gitbook/assets/image (6) (1).png" alt="" data-size="line">, Multilinear Polynomial commitment can be used as the primitive commitment.

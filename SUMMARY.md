@@ -44,6 +44,7 @@
   * [References](zkwasm-research/aplonk-aggregated-plonk/references.md)
 * [SHPlonk in Halo2](zkwasm-research/shplonk-in-halo2/README.md)
   * [Plonkish Protocols](zkwasm-research/shplonk-in-halo2/plonkish-protocols.md)
+  * [KZG10 Commitment Scheme](zkwasm-research/shplonk-in-halo2/kzg10-commitment-scheme.md)
 
 ## DevNet & TestNet
 

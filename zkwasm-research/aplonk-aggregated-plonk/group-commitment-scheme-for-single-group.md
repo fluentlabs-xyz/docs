@@ -11,7 +11,7 @@ SnarkPack introduces and utilizes a group commitment scheme as follows.
 
 ## Commitment:
 
-<figure><img src="../../.gitbook/assets/image (10).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (10) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### Properties
 
