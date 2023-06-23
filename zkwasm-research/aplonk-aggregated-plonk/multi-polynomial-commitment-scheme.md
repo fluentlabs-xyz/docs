@@ -4,7 +4,7 @@ Developing a multi-polynomial commitment scheme presents a significant obstacle 
 
 The KZG commitment scheme is as follows:
 
-### Key generation: <img src="../../.gitbook/assets/image (46).png" alt="" data-size="line">
+### Key generation: <img src="../../.gitbook/assets/image (46) (1).png" alt="" data-size="line">
 
 <figure><img src="../../.gitbook/assets/image (1) (1).png" alt="" width="563"><figcaption></figcaption></figure>
 
@@ -20,4 +20,4 @@ Verification is done with the following equality:
 
 Note that KZG enjoys the homomorphic property, which means that if μ1 and μ2 represent commitments to polynomials 𝑓1 and 𝑓2 respectively, then the sum of μ1 and μ2 is a commitment to their sum of polynomials 𝑓1 + 𝑓2. This homomorphic property enables an optimization when verifying multiple commitments μ1, . . . , μ𝑘 that are claimed to evaluate to values 𝑣1, . . . , 𝑣𝑘 at a shared point 𝑧 ∈ ℤ𝑝.
 
-Initially, a random linear combination of the commitments is computed as <img src="../../.gitbook/assets/image (64).png" alt="" data-size="line"> where 𝑟 is a uniformly sampled value from ℤ𝑝. Afterward, it is necessary to confirm that the computed value 𝜇̂ , a linear combination of the commitments, opens to the value <img src="../../.gitbook/assets/image (69).png" alt="" data-size="line"> at the point 𝑧. This technique allows the verifier to verify a single pairing equation rather than 𝑘 equations with a negligible statistical error.
+Initially, a random linear combination of the commitments is computed as <img src="../../.gitbook/assets/image (64).png" alt="" data-size="line"> where 𝑟 is a uniformly sampled value from ℤ𝑝. Afterward, it is necessary to confirm that the computed value 𝜇̂ , a linear combination of the commitments, opens to the value <img src="../../.gitbook/assets/image (69) (1).png" alt="" data-size="line"> at the point 𝑧. This technique allows the verifier to verify a single pairing equation rather than 𝑘 equations with a negligible statistical error.

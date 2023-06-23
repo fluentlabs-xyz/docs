@@ -26,7 +26,7 @@ We can think of the first column of the table as the finite field elements, and 
 
 where the Lagrange base polynomials defined in a binary field are represented by 𝑋 and 1 − 𝑋. The Multi-Linear Extension of a vector is a special polynomial denoted as 𝐹(𝑋4𝑋₃, 𝑋₂, 𝑋₁), which is constructed using these polynomials. In this scenario, the Sumcheck problem is defined as follows:
 
-<figure><img src="../../.gitbook/assets/image (37).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (37) (1).png" alt=""><figcaption></figcaption></figure>
 
 where 𝐶 ∈ 𝔽 and the protocol advances through the subsequent stages. In every round, the prover generates and commits to a univariate polynomial (Linear), and then obtains a challenge from the verifier.
 

@@ -46,6 +46,7 @@
   * [Plonkish Protocols](zkwasm-research/shplonk-in-halo2/plonkish-protocols.md)
   * [KZG10 Commitment Scheme](zkwasm-research/shplonk-in-halo2/kzg10-commitment-scheme.md)
   * [Batching with KZG](zkwasm-research/shplonk-in-halo2/batching-with-kzg.md)
+  * [Different Polynomial Commitments at different opening points](zkwasm-research/shplonk-in-halo2/different-polynomial-commitments-at-different-opening-points.md)
 
 ## DevNet & TestNet
 

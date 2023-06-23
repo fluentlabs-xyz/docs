@@ -20,17 +20,17 @@ Nova takes incremental computations, where each step is an [R1CS](understanding-
 
 If 𝐸 is the zero vector and 𝑢 = 1, then we have 𝐴𝑧 × 𝐵𝑧 = 𝐶𝑧. Namely, any R1CS can also be seen as a relaxed R1CS. Relaxed R1CS keeps the property that it is NP-complete, which means that we can change any NP problem to it. We want the folding scheme to combine two cases of R1CS with the same matrices 𝐴, 𝐵, 𝐶 into one case. Each R1CS has its own instance-witness pairs (that is, public and private data), 𝑧𝑖 = (𝑤𝑖 , 𝑥𝑖), and we want to make a new 𝑧 = (𝑤, 𝑥) that meets the R1CS system of equations with 𝐴, 𝐵, 𝐶, such that this also means that each 𝑧𝑖 = (𝑤𝑖 , 𝑥𝑖) does so. One way to do this is by having the verifier pick a random 𝑟 and do the following change:
 
-<figure><img src="../../.gitbook/assets/image (61).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (61) (1).png" alt=""><figcaption></figcaption></figure>
 
 This change would work for linear systems of equations, however since the R1CS is nonlinear, we cannot use this simple method. If we put this into the R1CS then we have the following:
 
-<figure><img src="../../.gitbook/assets/image (47).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (47) (1).png" alt=""><figcaption></figcaption></figure>
 
 In the relaxed R1CS, the error term 𝐸 will take all the cross-terms made by adding the linear combination, and 𝑢 will take the extra 𝑟 term on the right-hand side. To do this,
 
-<figure><img src="../../.gitbook/assets/image (41).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (41) (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (16).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (16) (1).png" alt=""><figcaption></figcaption></figure>
 
 and both 𝑢, 𝐸 are added to the instance-witness pair.
 
