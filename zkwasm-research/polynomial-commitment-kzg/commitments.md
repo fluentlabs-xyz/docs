@@ -15,8 +15,8 @@ $$
 Commitment schemes can be categorized according to their mathematical structure or type of message $$m$$ which may comprise multiple components and structures, including sets, vectors, functions, and more. For example, here below are some of the types of commitment schemes:
 
 * For a single message $$m$$, only a hash function can serve as the commitment primitive (e.g., SHA256, Keccak, Poseidon).
-* For a set of messages <img src="../../.gitbook/assets/image (49).png" alt="" data-size="line"> an accumulator can be used as the commitment primitive (e.g., RSA accumulator).
+* For a set of messages <img src="../../.gitbook/assets/image (49) (1).png" alt="" data-size="line"> an accumulator can be used as the commitment primitive (e.g., RSA accumulator).
 * For a vector of messages<img src="../../.gitbook/assets/image (57).png" alt="" data-size="line">, a Merkle Tree can be used as the commitment primitive.
 * For univariate polynomial messages <img src="../../.gitbook/assets/image (56).png" alt="" data-size="line">, Kate Polynomial commitment can be employed.
-* For multivariate polynomial messages <img src="../../.gitbook/assets/image (50).png" alt="" data-size="line">, Multivariate Polynomial commitment can serve as the primitive commitment.
+* For multivariate polynomial messages <img src="../../.gitbook/assets/image (50) (1).png" alt="" data-size="line">, Multivariate Polynomial commitment can serve as the primitive commitment.
 * For multilinear polynomial maps <img src="../../.gitbook/assets/image (6) (1).png" alt="" data-size="line">, Multilinear Polynomial commitment can be used as the primitive commitment.
