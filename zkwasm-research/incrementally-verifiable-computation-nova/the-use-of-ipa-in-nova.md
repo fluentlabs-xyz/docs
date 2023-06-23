@@ -8,7 +8,7 @@ Nova uses an Inner Product Argument (IPA), which uses Pedersen commitments. It d
 
 An instance (that is, the public variables) for a committed relaxed R1CS is given by 𝑥, the public input and output variables, 𝑢 and the commitments to 𝐸, 𝑐𝑜𝑚(𝐸) and 𝑐𝑜𝑚(𝑤). We can put these in the tuple (𝑥, 𝑐𝑜𝑚(𝑤), 𝑐𝑜𝑚(𝐸), 𝑢). The instance is met by a witness (secret variables) (𝐸, 𝑟𝐸, 𝑤, 𝑟𝑤) if
 
-<figure><img src="../../.gitbook/assets/image (58).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (58) (1).png" alt=""><figcaption></figcaption></figure>
 
 where 𝑧 = (𝑤, 𝑥, 𝑢). Namely, the witness meets the instance if the public variables 𝑐𝑜𝑚(𝐸) and 𝑐𝑜𝑚(𝑤) are really the commitments to the private variables 𝐸, 𝑤 using randomness 𝑟𝐸, 𝑟𝑤, respectively and they follow the relaxed R1CS equations.
 

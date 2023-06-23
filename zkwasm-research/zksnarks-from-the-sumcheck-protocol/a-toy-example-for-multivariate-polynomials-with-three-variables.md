@@ -5,7 +5,7 @@ Let 𝑔(𝑋1,𝑋2, 𝑋3) = 2𝑋1 3 + 𝑋1𝑋3 + 𝑋2𝑋3. The sum of �
 1.  When the Sumcheck protocol is applied to 𝑔, the honest prover’s first message in the protocol is the univariate polynomial 𝑠1(𝑋1) equal to:\
     \\
 
-    <figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+    <figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
 2. The verifier checks that 𝑠1(0) + 𝑠1(1) = 12, and then sends the prover 𝑟1. Suppose that 𝑟1 = 2.
 3. The honest prover would then respond with the univariate polynomial 𝑠2(𝑋2) = 𝑔(2, 𝑋2, 0) + 𝑔(2, 𝑋2, 1) = 16 + (16 + 2 + 𝑋2) = 34 + 𝑋2.
 4. The verifier checks that 𝑠2(0) + 𝑠2(1) = 𝑠1(𝑟1), which amounts in this example to confirming that 34 + (34 + 1) = 8 (2 3 ) + 4 + 1; indeed, both the left hand side and right hand side equal 69. The verifier then sends the prover 𝑟2. Suppose that 𝑟2 = 3.
