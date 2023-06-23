@@ -14,20 +14,20 @@ SHPlonk is an optimization on polynomial commitment layer which can work with Pl
 
 ## The Protocol
 
-The elliptic curve pairing is assumed to be asymmetric – that means that our pairing is a map on 𝔾1 × 𝔾2 . In this section, we will refer to the chosen generator of each group as <img src="../../.gitbook/assets/image (18).png" alt="" data-size="line"> respectively.
+The elliptic curve pairing is assumed to be asymmetric – that means that our pairing is a map on 𝔾1 × 𝔾2 . In this section, we will refer to the chosen generator of each group as <img src="../../.gitbook/assets/image (17).png" alt="" data-size="line"> respectively.
 
 A Structured Reference String 𝑆𝑅𝑆 = 𝐺𝑒𝑛(𝑑,𝑡)
 
 * 𝑑 is the maximum degree of polynomial this SRS can support. In general, the degree is much larger than 𝑡 where 𝑡 is the maximum number of evaluation points. Note that a polynomial commitment scheme is the first step in a ZKP protocol. In the SHPLONK protocol, there are three polynomials to evaluate. The first polynomial will be evaluated at two points, and the others will be evaluated at one point each. This means that in the use of SHPLONK, the value of 𝑡 is expected be four.
 * The SRS is of the form:
 
-<figure><img src="../../.gitbook/assets/image (41).png" alt="" width="371"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (39).png" alt="" width="371"><figcaption></figcaption></figure>
 
 ### High Level Flow:
 
 <figure><img src="../../.gitbook/assets/highlevel-SHplonk (3).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (26).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (23).png" alt=""><figcaption></figcaption></figure>
 
 ### The Technical Flow:
 

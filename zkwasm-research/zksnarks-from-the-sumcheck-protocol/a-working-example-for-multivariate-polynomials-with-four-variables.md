@@ -42,7 +42,7 @@ The calculation which is made at **round 1** shows that the prover computes:
 
 Let the verifier send the challenge 𝑏1 ∈ 𝔽. Then the polynomial at **round 2** would be described as follows.
 
-<figure><img src="../../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (5) (1).png" alt=""><figcaption></figcaption></figure>
 
 Let the verifier send the challenge 𝑏2 ∈ 𝔽. Then the polynomial at **round 3** would be described as follows.
 

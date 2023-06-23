@@ -49,6 +49,7 @@
   * [Different Polynomial Commitments at different opening points](zkwasm-research/shplonk-in-halo2/different-polynomial-commitments-at-different-opening-points.md)
   * [SHPlonk](zkwasm-research/shplonk-in-halo2/shplonk.md)
   * [Benchmarks](zkwasm-research/shplonk-in-halo2/benchmarks.md)
+  * [References](zkwasm-research/shplonk-in-halo2/references.md)
 
 ## DevNet & TestNet
 
