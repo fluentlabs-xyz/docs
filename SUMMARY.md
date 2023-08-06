@@ -3,12 +3,10 @@
 ## Introduction
 
 * [Overview](README.md)
-* [Technology](introduction/technology.md)
 
 ## Deep Dive
 
-* [Building with WebAssembly](deep-dive/building-with-webassembly/README.md)
-  * [Wasm0 Litepaper](https://wasm0.io/litepaper.pdf)
+* [Building with WebAssembly](deep-dive/building-with-webassembly.md)
 * [Why Wasm in zkVM?](deep-dive/why-wasm-in-zkvm.md)
 
 ## ZKWasm Research
@@ -57,9 +55,8 @@
 
 ## ZKWasm Dictionary
 
-* [Wasm0 Wikipedia](zkwasm-dictionary/wasm-0-wikipedia.md)
+* [Wikipedia](zkwasm-dictionary/wasm-0-wikipedia.md)
 
 ## Get Involved
 
 * [Roadmap](get-involved/roadmap.md)
-* [Become an Early Adopter](get-involved/become-an-early-adopter.md)

@@ -1,57 +1,41 @@
 ---
-description: Scaling Blockchains Towards Mainstream Adoption
+description: The zkWASM Execution Layer for Ethereum
 ---
 
 # Overview
 
-## What is Wasm0?
+### Introduction <a href="#introduction" id="introduction"></a>
 
-Wasm0 is a blockchain platform that functions as a Layer 2 solution and replicates the [WebAssembly](zkwasm-dictionary/wasm-0-wikipedia.md#webassembly) environment. By utilizing the properties of [ZK-based](zkwasm-dictionary/wasm-0-wikipedia.md#zero-knowledge) roll-up mechanisms, such as zkEVM, Wasm0 can aggregate multiple transactions into a single proof without compromising the security of the blockchain. This approach improves the blockchain's throughput, allowing for greater scalability.&#x20;
+Fluent is a general-purpose, **zkWASM execution layer** for Ethereum. It's an **L2 rollup** that lets developers build high-throughput applications in their favorite programming languages, including Rust, Solidity, TypeScript, and more.
 
-The main goal of Wasm0 is to enable the seamless integration of libraries and applications that utilize WASM technology into the blockchain ecosystem. By leveraging the advantages of Layer 2, Wasm0 can connect traditional WASM-based communities such as web, gaming, socials,  and more, with dApps running on the blockchain. This integration opens up new possibilities for developers and users in the Web3 world.
+***
 
-## Benefits of ZKWasm
+The fusion of three key components forms the bedrock of Fluent's architecture:
 
-<details>
+**1. Rollup Technology**
 
-<summary>High-Performance Applications</summary>
+Fluent leverages rollup technology to remove throughput and cost constraints, enabling developers to build high-performance applications without worrying about scalability issues.
 
-Wasm0 enables high-performance applications to be developed on the blockchain. By leveraging Layer 2 solutions and the properties of ZK-based roll-up mechanisms, multiple transactions can be aggregated into a single proof. This approach increases the blockchain's throughput without sacrificing security.
+**2. WASM Execution**
 
-</details>
+By adopting WebAssembly (WASM) execution, Fluent significantly lowers the learning curve for developers. This allows them to utilize their existing knowledge and skills to build dApps, opening doors for a broader developer community to participate in Web3.
 
-<details>
+**3. EVM Compatibility**
 
-<summary>Interoperability</summary>
+Fluent ensures seamless end-user adoption by maintaining compatibility with Ethereum Virtual Machine (EVM) standards to capitalize on its network effects. This way, existing Ethereum developers can leverage their expertise while exploring new possibilities through Fluent's advanced features.
 
-Interoperability is a significant benefit of Wasm0. By seamlessly integrating WASM-based applications into the blockchain ecosystem, developers can create applications that can work across multiple blockchains. This allows for greater flexibility and choice for developers and users alike.
+***
 
-</details>
+### The Fluent Advantage: Experience, Flexibility, and Performance
 
-<details>
+#### **1. Developer Experience**:
 
-<summary>Compatibility with Existing Ethereum Ecosystem</summary>
+Fluent prioritizes user experience, streamlining the development process, and eliminating unnecessary complexities. By supporting multiple programming languages, developers can work with their preferred tools, making the transition to blockchain development smooth and seamless.
 
-Wasm0 is specifically tailored to be compatible with the existing Ethereum ecosystem. As a result, developers can easily integrate their existing applications and libraries with the blockchain. This reduces the learning curve for developers and provides a smooth transition to blockchain development.
+#### **2. Flexibility**:
 
-</details>
+The platform offers unparalleled flexibility, empowering developers to explore non-EVM and other esoteric programming languages. Fluent understands that diversity in programming languages leads to greater creativity and innovation within the blockchain ecosystem.
 
-<details>
+#### **3. Performance**:
 
-<summary>Potential for SNARK Integration</summary>
-
-Wasm0 also explores the potential benefits of integrating SNARK into WASM-based decentralized applications. SNARKs (Succinct Non-Interactive Arguments of Knowledge) are zero-knowledge proofs that allow for the validation of computations without revealing the inputs or outputs.&#x20;
-
-This can significantly improve privacy and scalability in decentralized applications. By exploring the potential benefits of integrating SNARK, Wasm0 is paving the way for greater privacy and scalability in blockchain applications.
-
-</details>
-
-<details>
-
-<summary>Broader Adoption of Blockchain Technology</summary>
-
-Overall, the benefits of Wasm0 are significant. By enabling high-performance, interoperable applications that are compatible with the existing Ethereum ecosystem and exploring the potential benefits of integrating SNARK, Wasm0 is making blockchain technology more accessible to developers and users alike.&#x20;
-
-This can lead to greater adoption of blockchain technology and ultimately, a more decentralized and secure future.
-
-</details>
+Fluent sets a new standard for high performance and low-cost execution on the Ethereum network. By leveraging zkWASM rollup technology, developers can build applications that achieve impressive throughput and responsiveness, making it ideal for resource-intensive social and gaming applications.
