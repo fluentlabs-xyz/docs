@@ -4,6 +4,6 @@ aPlonk introduces and uses the new technique called the multi-polynomial commitm
 
 Namely, they show that binding property is unnecessary as long as the underlying polynomial commitment scheme is inner-product binding and inner-product extractable. In this way, they have removed the usage of <img src="../../.gitbook/assets/image (23) (1).png" alt="" data-size="line"> and doubled the performance of the main subprotocol of SnarkPack. This is because of the underlying KZG commitments’ which satisfy both inner-product binding and extractable properties.
 
-### Wasm0 Direction
+### Fluent Direction
 
-aPlonk currently supports only BLS curves, and one research and implementation direction is to replace BN curves to integrate with Halo 2, improving Wasm0 proving times. Another research direction is whether folding schemes can be integrated with multilinear commitment schemes improving aPlonk.
+aPlonk currently supports only BLS curves, and one research and implementation direction is to replace BN curves to integrate with Halo 2, improving Fluent proving times. Another research direction is whether folding schemes can be integrated with multilinear commitment schemes improving aPlonk.
