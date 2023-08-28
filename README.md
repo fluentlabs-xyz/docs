@@ -20,7 +20,7 @@ Fluent leverages rollup technology to remove throughput and cost constraints, en
 
 By adopting WebAssembly (WASM) execution, Fluent significantly lowers the learning curve for developers. This allows them to utilize their existing knowledge and skills to build dApps, opening doors for a broader developer community to participate in Web3.
 
-**3. EVM Compatibility**
+**3. EVM Tooling Compatibility**
 
 Fluent ensures seamless end-user adoption by maintaining compatibility with Ethereum Virtual Machine (EVM) standards to capitalize on its network effects. This way, existing Ethereum developers can leverage their expertise while exploring new possibilities through Fluent's advanced features.
 
