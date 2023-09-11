@@ -60,3 +60,4 @@
 ## Get Involved
 
 * [Roadmap](get-involved/roadmap.md)
+* [FAQ](get-involved/faq.md)
