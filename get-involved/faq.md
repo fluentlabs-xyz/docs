@@ -24,6 +24,36 @@ Initially, Fluent will support languages such as Rust, Solidity, and TypeScript,
 
 <details>
 
+<summary>How does Fluent support Ethereum tooling? </summary>
+
+Fluent provides Ethereum-compatible components, including support for Solidity language, EVM opcode naming conventions for applications, and compatibility with Ethereum data structures such as account/storage trie and block/transaction structure.
+
+</details>
+
+<details>
+
+<summary>Do contracts written in Solidity and WASM languages have the capability to make cross-contract calls to one another? </summary>
+
+Yes. \
+\
+Contracts written in Solidity and WASM languages can make cross-contract calls to each other because they both run on WebAssembly, allowing onchain interaction between them.
+
+</details>
+
+<details>
+
+<summary>Does Fluent utilize the wasm host API, and what function does it serve within Fluent's architecture? </summary>
+
+Fluent has partial support for its own host API, in addition to partial support for WASI and EVM. \
+\
+We are actively working on expanding support for various host APIs, including SYS (Fluent's native), WASI, EMSCRIPTEN, EVM, and additional APIs for running WebAssembly inside WebAssembly without overhead, similar to virtualization. \
+\
+These APIs play a crucial role in enabling interoperability and expanding Fluent's capabilities.
+
+</details>
+
+<details>
+
 <summary>Wen testnet for Fluent? </summary>
 
 We are very close to the launch of Fluent's private beta testnet and will be onboarding the first few teams and projects. \
