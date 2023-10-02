@@ -8,6 +8,7 @@
 
 * [Building with WebAssembly](deep-dive/building-with-webassembly.md)
 * [Why Wasm in zkVM?](deep-dive/why-wasm-in-zkvm.md)
+* [FAQ](deep-dive/faq.md)
 
 ## ZKWasm Research
 
@@ -60,4 +61,3 @@
 ## Get Involved
 
 * [Roadmap](get-involved/roadmap.md)
-* [FAQ](get-involved/faq.md)
