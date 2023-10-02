@@ -1,5 +1,5 @@
 ---
-description: 'Current status: Building'
+description: 'Current status: Close to the Private Beta Testnet Release'
 ---
 
 # Roadmap
