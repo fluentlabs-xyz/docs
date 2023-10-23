@@ -2,17 +2,15 @@
 description: Wasm and Zero-Knowledge Proofs
 ---
 
-# Why Wasm in ZKVM?
+# Why Wasm in zkVM?
 
-WebAssembly (Wasm) is a popular binary format that allows developers to run code written in multiple programming languages on the web. 
+WebAssembly (Wasm) is a popular binary format that allows developers to run code written in multiple programming languages on the web.
 
 However, security concerns have been raised about running untrusted code on the web. One approach to addressing this issue is to use Zero-Knowledge Proofs (ZKPs), a cryptographic technique that allows a user to prove a statement about their private data without revealing the data itself.
 
 By combining WASM with ZKPs, developers can create applications that are both fast and secure.
 
 ## Why Wasm in ZKVM?
-
-<figure><img src="https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FFC1DMiUuayu0DbwfgkH0%2Fuploads%2FHO9PfnUs6P9p5QzZDprM%2Fscreely-1681731288672.png?alt=media&token=b9fdd863-76c0-481a-a2eb-5256a64beed1" alt=""></figure>
 
 1. **High performance:** WASM allows good performance since it is designed to be as near to native machine code as feasible while remaining platform-independent.
 2. **Small size:** WASM generates binary files that are tiny in size. This is an excellent fit for the blockchain world because smaller binaries result in less transaction data and thus lower gas fees.
