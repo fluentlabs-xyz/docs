@@ -14,16 +14,16 @@ As an early-stage release, it should be noted that this version of the service m
 
 **Network params:**
 
-* **Network name**: WASM-0 Developer Preview
-* **RPC URL**: [https://rpc.devnet.wasm0.io/](https://rpc.devnet.wasm0.io/)
+* **Network name**: Fluent Developer Preview
+* **RPC URL**: [https://rpc.dev0.fluentlabs.xyz/](https://rpc.dev0.fluentlabs.xyz/)
 * **Chain ID**: 99
-* **Symol**: WZT
+* **Symbol**: WZT
 
-Here are links to WASM-0 developer preview resources:
+Here are links to Fluent developer preview resources:
 
-* **Faucet**: [https://faucet.devnet.wasm0.io/](https://faucet.devnet.wasm0.io/)
-* **RPC**: [https://rpc.devnet.wasm0.io/](https://rpc.devnet.wasm0.io/)
-* **Explorer**: [https://blockscout.devnet.wasm0.io/](https://blockscout.devnet.wasm0.io/)
+* **Faucet**: [https://faucet.dev0.fluentlabs.xyz/](https://faucet.dev0.fluentlabs.xyz/)
+* **RPC**: [https://rpc.dev0.fluentlabs.xyz/](https://rpc.dev0.fluentlabs.xyz/)
+* **Explorer**: [https://blockscout.dev0.fluentlabs.xyz/](https://blockscout.dev0.fluentlabs.xyz/)
 
 ## Example & SDK
 
