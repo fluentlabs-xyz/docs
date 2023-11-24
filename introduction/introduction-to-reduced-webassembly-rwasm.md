@@ -24,7 +24,7 @@ The goal of rWasm is to create a flattened binary representation of Wasm that is
 {% endtab %}
 
 {% tab title="Binary Optimization" %}
-* Replaced all sections with loader inside rWASM that 100% follows the same WASM standards. It brings compatibility with all sections. Simulated sections, such as memory, table, data, and element segments, streamline the binary structure without compromising functionality
+* Replaced all sections with loader inside rWasm that 100% follows the same Wasm standards. It brings compatibility with all sections. Simulated sections, such as memory, table, data, and element segments, streamline the binary structure without compromising functionality
 * Global section support is refined for both mutable and immutable variables, ensuring static verification of their correct usage
 {% endtab %}
 {% endtabs %}
