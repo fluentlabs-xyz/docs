@@ -16,7 +16,7 @@ As an early-stage release, it should be noted that this version of the service m
 
 * **Network name**: Fluent Developer Preview
 * **RPC URL**: [https://rpc.dev0.fluentlabs.xyz/](https://rpc.dev0.fluentlabs.xyz/)
-* **Chain ID**: 99
+* **Chain ID**: 1337
 * **Symbol**: WZT
 
 Here are links to Fluent developer preview resources:
@@ -41,6 +41,6 @@ pub extern "C" fn main() {
 }
 ```
 
-### SDK for Integration:&#x20;
+### SDK for Integration:
 
 {% embed url="https://github.com/wasm0/wasm0-rustsdk" %}

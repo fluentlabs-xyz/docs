@@ -1,12 +1,12 @@
 ---
-description: The zkWASM Execution Layer for Ethereum
+description: The zkWasm Execution Layer for Ethereum
 ---
 
 # Overview
 
 ### Introduction <a href="#introduction" id="introduction"></a>
 
-Fluent is a general-purpose, **zkWASM execution layer** for Ethereum. It's an **L2 rollup** that lets developers build high-throughput applications in their favorite programming languages, including Rust, Solidity, TypeScript, and more.
+Fluent is a general-purpose, **zkWasm execution layer** for Ethereum. It's an **L2 rollup** that lets developers build high-throughput applications in their favorite programming languages, including Rust, Solidity, TypeScript, and more.
 
 ***
 
@@ -38,4 +38,4 @@ The platform offers unparalleled flexibility, empowering developers to explore n
 
 #### **3. Performance**:
 
-Fluent sets a new standard for high performance and low-cost execution on the Ethereum network. By leveraging zkWASM rollup technology, developers can build applications that achieve impressive throughput and responsiveness, making it ideal for resource-intensive social and gaming applications.
+Fluent sets a new standard for high performance and low-cost execution on the Ethereum network. By leveraging zkWasm rollup technology, developers can build applications that achieve impressive throughput and responsiveness, making it ideal for resource-intensive social and gaming applications.

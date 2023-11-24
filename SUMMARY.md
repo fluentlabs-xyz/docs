@@ -3,6 +3,7 @@
 ## Introduction
 
 * [Overview](README.md)
+* [Introduction to Reduced-WebAssembly (rWasm)](introduction/introduction-to-reduced-webassembly-rwasm.md)
 
 ## Deep Dive
 
