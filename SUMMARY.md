@@ -5,11 +5,12 @@
 * [Overview](README.md)
 * [Introduction to Reduced-WebAssembly (rWasm)](introduction/introduction-to-reduced-webassembly-rwasm.md)
 
-## Deep Dive
+## Build using Fluentbase SDK
 
-* [Building with WebAssembly](deep-dive/building-with-webassembly.md)
-* [Why Wasm in zkVM?](deep-dive/why-wasm-in-zkvm.md)
-* [FAQ](deep-dive/faq.md)
+* [Get Started with Fluentbase SDK](build-using-fluentbase-sdk/get-started-with-fluentbase-sdk/README.md)
+  * [Creating a New App using Fluentbase SDK](build-using-fluentbase-sdk/get-started-with-fluentbase-sdk/creating-a-new-app-using-fluentbase-sdk.md)
+  * [Deploying Your App to Fluent](build-using-fluentbase-sdk/get-started-with-fluentbase-sdk/deploying-your-app-to-fluent.md)
+* [Developer Preview](build-using-fluentbase-sdk/developer-preview.md)
 
 ## ZKWasm Research
 
@@ -51,14 +52,12 @@
   * [Benchmarks](zkwasm-research/shplonk-in-halo2/benchmarks.md)
   * [References](zkwasm-research/shplonk-in-halo2/references.md)
 
-## DevNet & TestNet
-
-* [Developer Preview](devnet-and-testnet/developer-preview.md)
-
 ## ZKWasm Dictionary
 
 * [Wikipedia](zkwasm-dictionary/wasm-0-wikipedia.md)
 
 ## Get Involved
 
-* [Roadmap](get-involved/roadmap.md)
+* [Early Builders Program](https://form.typeform.com/to/ytQi1Pdc)
+* [Community](https://discord.com/invite/cRQSS3NYps)
+* [FAQ](get-involved/faq.md)
