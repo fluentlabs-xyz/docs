@@ -19,7 +19,7 @@ const Web3 = require('web3');
 const fs = require('fs');
 
 // provide your private key 
-const DEPLOYER_PRIVATE_KEY = 'your key private key here';
+const DEPLOYER_PRIVATE_KEY = 'enter your private key here';
 
 const main = async () => {
     if (process.argv.length < 3) {
