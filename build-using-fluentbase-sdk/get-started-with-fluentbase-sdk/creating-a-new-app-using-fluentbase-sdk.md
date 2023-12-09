@@ -1,6 +1,6 @@
 # Creating a New App using Fluentbase SDK
 
-To demonstrate the usage of Fluentbase SDK, explore the provided examples [in this repository](https://github.com/fluentlabs-xyz/fluentbase/tree/devel/examples). The repository houses a [collection of examples](https://github.com/fluentlabs-xyz/fluentbase/tree/devel/examples/src) that serve as practical demonstrations for building and executing apps on Fluent, and will soon leverage our optimized circuits.
+To demonstrate the usage of the Fluentbase SDK, explore the examples provided [in this repository](https://github.com/fluentlabs-xyz/fluentbase/tree/devel/examples). This repository contains a [collection of practical demonstrations](https://github.com/fluentlabs-xyz/fluentbase/tree/devel/examples/src) for building and executing apps on Fluent. Soon, these examples will leverage our optimized circuits.
 
 ## Get Started
 
