@@ -5,13 +5,6 @@
 * [Overview](README.md)
 * [Introduction to Fluent VM](introduction/introduction-to-fluent-vm.md)
 
-## Build using Fluentbase SDK
-
-* [Get Started with Fluentbase SDK](build-using-fluentbase-sdk/get-started-with-fluentbase-sdk/README.md)
-  * [Creating a New App using Fluentbase SDK](build-using-fluentbase-sdk/get-started-with-fluentbase-sdk/creating-a-new-app-using-fluentbase-sdk.md)
-  * [Deploying Your App to Fluent](build-using-fluentbase-sdk/get-started-with-fluentbase-sdk/deploying-your-app-to-fluent.md)
-* [Developer Preview](build-using-fluentbase-sdk/developer-preview.md)
-
 ## ZKWasm Research
 
 * [Incrementally Verifiable Computation: NOVA](zkwasm-research/incrementally-verifiable-computation-nova/README.md)
