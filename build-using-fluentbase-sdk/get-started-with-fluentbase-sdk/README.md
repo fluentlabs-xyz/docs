@@ -19,7 +19,7 @@ Developers are encouraged to use functions exclusively from the Fluentbase SDK. 
 
 ## Fluentbase Operation
 
-Fluentbase operates using the [rWasm VM (reduced WebAssembly)](../../introduction/introduction-to-reduced-webassembly-rwasm.md). This VM employs 100% compatible WebAssembly binary representation, optimized for Zero-Knowledge (ZK) operations. The instruction set is reduced, and sections are embedded inside the binary to simplify the proving process.
+Fluentbase operates using the [rWasm VM (reduced WebAssembly)](../../introduction/introduction-to-fluent-vm.md). This VM employs 100% compatible WebAssembly binary representation, optimized for Zero-Knowledge (ZK) operations. The instruction set is reduced, and sections are embedded inside the binary to simplify the proving process.
 
 ### Limitations and Future Enhancements
 

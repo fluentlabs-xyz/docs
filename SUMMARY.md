@@ -3,7 +3,7 @@
 ## Introduction
 
 * [Overview](README.md)
-* [Introduction to Reduced-WebAssembly (rWasm)](introduction/introduction-to-reduced-webassembly-rwasm.md)
+* [Introduction to Fluent VM](introduction/introduction-to-fluent-vm.md)
 
 ## Build using Fluentbase SDK
 

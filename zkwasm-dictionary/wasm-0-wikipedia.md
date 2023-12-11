@@ -1,8 +1,8 @@
 ---
-description: Short descriptions of Wasm0 keywords referring to specific concepts
+description: Short descriptions of keywords referring to specific concepts
 ---
 
-# Wasm0 Wikipedia
+# Wikipedia
 
 ### Binary-format
 
@@ -82,8 +82,8 @@ zkEVM is a modified version of the EVM that incorporates zero-knowledge proof sy
 
 zkWasm is a new architecture that combines the benefits of Zero Knowledge proof systems with the WebAssembly (Wasm) framework.
 
-By combining these two technologies, zkWasm promises to provide a secure and private way to run decentralized applications (dApps) on the blockchain.
+By combining these two technologies, zkWasm promises to provide a secure and private way to run decentralized applications (DApps) on the blockchain.
 
 It allows developers to write smart contracts that can execute complex calculations and transactions, without revealing any sensitive information to the blockchain network or to third parties.
 
-This enhances the privacy and security of dApps, and can lead to the development of new types of decentralized applications with novel features and capabilities.
+This enhances the privacy and security of DApps, and can lead to the development of new types of decentralized applications with novel features and capabilities.

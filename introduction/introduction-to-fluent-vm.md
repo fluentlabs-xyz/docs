@@ -1,8 +1,4 @@
----
-description: Reduced-WebAssembly (rWasm)
----
-
-# Introduction to Reduced-WebAssembly (rWasm)
+# Introduction to Fluent VM
 
 ## **Overview**
 
@@ -42,8 +38,8 @@ While still in development, rWasm shows promise in simplifying the creation of z
 * rWasm has a more flattened structure without relative offsets
 * rWasm does not require a type mapping validator
 * rWasm must be executed as-is without any side effects like drop/keep and cannot apply any conditional state changes
-* rWasm is easier to prove compared to original WASM
-* rWasm is a promising new technology with the potential to simplify the development of secure and efficient WASM applications
+* rWasm is easier to prove compared to original Wasm
+* rWasm is a promising new technology with the potential to simplify the development of secure and efficient Wasm applications
 {% endtab %}
 
 {% tab title="Technical and implementation differences" %}

@@ -16,9 +16,9 @@ The fusion of three key components forms the bedrock of Fluent's architecture:
 
 Fluent leverages rollup technology to remove throughput and cost constraints, enabling developers to build high-performance applications without worrying about scalability issues.
 
-**2. WASM Execution**
+**2. Wasm Execution**
 
-By adopting WebAssembly (WASM) execution, Fluent significantly lowers the learning curve for developers. This allows them to utilize their existing knowledge and skills to build dApps, opening doors for a broader developer community to participate in Web3.
+By adopting WebAssembly (Wasm) execution, Fluent significantly lowers the learning curve for developers. This allows them to utilize their existing knowledge and skills to build DApps, opening doors for a broader developer community to participate in web3.
 
 **3. EVM Tooling Compatibility**
 
