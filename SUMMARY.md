@@ -3,7 +3,9 @@
 ## Introduction
 
 * [Overview](README.md)
+* [What is Fluent?](introduction/what-is-fluent.md)
 * [Introduction to Fluent VM](introduction/introduction-to-fluent-vm.md)
+* [Build with Fluentbase](introduction/build-with-fluentbase.md)
 
 ## ZKWasm Research
 

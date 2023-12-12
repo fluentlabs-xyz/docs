@@ -1,41 +1,25 @@
----
-description: The zkWasm Execution Layer for Ethereum
----
-
 # Overview
 
-### Introduction <a href="#introduction" id="introduction"></a>
+Fluent brings [WebAssembly (Wasm)](https://webassembly.org/) to Ethereum.
 
-Fluent is a general-purpose, **zkWasm execution layer** for Ethereum. It's an **L2 rollup** that lets developers build high-throughput applications in their favorite programming languages, including Rust, Solidity, TypeScript, and more.
+## What is Wasm?
 
-***
+Wasm is a low-level, portable binary format and compilation target for high-level programming languages.
 
-The fusion of three key components forms the bedrock of Fluent's architecture:
+The above sentence probably doesn't mean much to you, so to better illustrate what Wasm is, its impact on web2 and web3, and to further explore its future potential, we recommend reading more here ↴
 
-**1. Rollup Technology**
+{% embed url="https://mirror.xyz/fluentlabs.eth/7I4djVRnKFPkxlr2TYkCiMjmPQuE4vyyWIPK5V9l2h0" fullWidth="false" %}
 
-Fluent leverages rollup technology to remove throughput and cost constraints, enabling developers to build high-performance applications without worrying about scalability issues.
+### TL;DR
 
-**2. Wasm Execution**
+Wasm enables developers to program for Ethereum similarly to how they program for the contemporary web today. It enables the use of nearly any general-purpose programming language, such as Rust, TypeScript, C++, etc., along with preferred web2 libraries and frameworks.
 
-By adopting WebAssembly (Wasm) execution, Fluent significantly lowers the learning curve for developers. This allows them to utilize their existing knowledge and skills to build DApps, opening doors for a broader developer community to participate in web3.
+## How does Fluent use Wasm?
 
-**3. EVM Tooling Compatibility**
+Fluent uses Wasm as the foundation for its zkVM, L2 and framework.
 
-Fluent ensures seamless end-user adoption by maintaining compatibility with Ethereum Virtual Machine (EVM) standards to capitalize on its network effects. This way, existing Ethereum developers can leverage their expertise while exploring new possibilities through Fluent's advanced features.
+Let’s walk through each of these components.
 
-***
+<table data-view="cards"><thead><tr><th data-type="content-ref"></th><th></th><th data-hidden data-card-cover data-type="files"></th></tr></thead><tbody><tr><td><a href="introduction/what-is-fluent.md">what-is-fluent.md</a></td><td>Fluent L2 Rollup</td><td><a href=".gitbook/assets/fluent-l2-cover.png">fluent-l2-cover.png</a></td></tr><tr><td><a href="introduction/introduction-to-fluent-vm.md">introduction-to-fluent-vm.md</a></td><td>Fluent's Approach to zkWasm</td><td><a href=".gitbook/assets/VM.png">VM.png</a></td></tr><tr><td></td><td>Framework to Build on Fluent</td><td><a href=".gitbook/assets/fluentbase-cover (1).png">fluentbase-cover (1).png</a></td></tr></tbody></table>
 
-### The Fluent Advantage: Experience, Flexibility, and Performance
-
-#### **1. Developer Experience**:
-
-Fluent prioritizes user experience, streamlining the development process, and eliminating unnecessary complexities. By supporting multiple programming languages, developers can work with their preferred tools, making the transition to blockchain development smooth and seamless.
-
-#### **2. Flexibility**:
-
-The platform offers unparalleled flexibility, empowering developers to explore non-EVM and other esoteric programming languages. Fluent understands that diversity in programming languages leads to greater creativity and innovation within the blockchain ecosystem.
-
-#### **3. Performance**:
-
-Fluent sets a new standard for high performance and low-cost execution on the Ethereum network. By leveraging zkWasm rollup technology, developers can build applications that achieve impressive throughput and responsiveness, making it ideal for resource-intensive social and gaming applications.
+### &#x20;<a href="#introduction" id="introduction"></a>

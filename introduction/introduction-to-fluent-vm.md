@@ -1,8 +1,20 @@
+---
+description: Fluent's approach to zkWasm
+---
+
 # Introduction to Fluent VM
+
+At the core of Fluent lies our zkWasm VM.&#x20;
+
+Here's an overview of Fluent's approach to zkWasm ↓
 
 ## **Overview**
 
-Reduced-WebAssembly (rWasm) is a modified version of the Wasm binary instruction format, specifically designed to enhance the efficiency, and ease of verification in smart contract execution within the Fluent ecosystem.&#x20;
+Fluent VM is a modified version of the Wasm binary instruction format, specifically designed to enhance the efficiency, & ease of verification in smart contract execution.
+
+Think of it as a reduced version of Wasm, we call it rWasm.
+
+## Reduced-WebAssembly (rWasm)
 
 The goal of rWasm is to create a flattened binary representation of Wasm that is backward compatible with the Wasm instruction set. This will make it easier to prove the correctness of Wasm programs and improve the overall efficiency by offering developers a more straightforward and zkSNARK-friendly environment while maintaining compatibility with the original instruction set.
 
