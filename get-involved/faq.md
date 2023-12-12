@@ -56,8 +56,10 @@ These APIs play a crucial role in enabling interoperability and expanding Fluent
 
 <summary>Wen testnet for Fluent?</summary>
 
-We are very close to the launch of Fluent's private beta testnet and will be onboarding the first few teams and projects.\
-\
-Join the [Early Builders Program](https://form.typeform.com/to/ytQi1Pdc) to build on Fluent!
+We are live with Fluent's private beta testnet and access is limited to a few teams and projects.
+
+We'll be onboarding more teams on a rolling basis.&#x20;
+
+To join, signup for our [Early Builders Program](https://form.typeform.com/to/ytQi1Pdc) to build on Fluent!
 
 </details>

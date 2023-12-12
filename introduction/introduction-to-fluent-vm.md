@@ -73,5 +73,3 @@ While still in development, rWasm shows promise in simplifying the creation of z
 * **Automatic Migrations:** Within Fluent, all migrations from Wasm to rWasm and handling of Poseidon hashes occur automatically.&#x20;
 
 > Developers remain unaware of the underlying rWasm or hash intricacies, ensuring a seamless development experience.
-
-\
