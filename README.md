@@ -24,6 +24,6 @@ Let’s walk through each of these components.
 
 
 
-<table data-column-title-hidden data-view="cards"><thead><tr><th align="center"></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td align="center"><strong>Fluent L2 Rollup</strong></td><td><a href="introduction/what-is-fluent.md">what-is-fluent.md</a></td></tr><tr><td align="center"><strong>Fluent's Approach to zkWasm</strong></td><td><a href="introduction/introduction-to-fluent-vm.md">introduction-to-fluent-vm.md</a></td></tr><tr><td align="center"><strong>Framework to Build on Fluent</strong></td><td><a href="introduction/build-with-fluentbase.md">build-with-fluentbase.md</a></td></tr></tbody></table>
+<table data-column-title-hidden data-view="cards"><thead><tr><th align="center"></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td align="center"><p><strong>Fluent Layer 2</strong> </p><p><strong>Blockchain</strong></p></td><td><a href="introduction/what-is-fluent.md">what-is-fluent.md</a></td></tr><tr><td align="center"><strong>Fluent's Approach to zkWasm</strong></td><td><a href="introduction/introduction-to-fluent-vm.md">introduction-to-fluent-vm.md</a></td></tr><tr><td align="center"><strong>Framework to Build on Fluent</strong></td><td><a href="introduction/build-with-fluentbase.md">build-with-fluentbase.md</a></td></tr></tbody></table>
 
 ### &#x20;<a href="#introduction" id="introduction"></a>

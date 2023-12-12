@@ -4,7 +4,7 @@ description: The zkWasm L2 on Ethereum
 
 # What is Fluent?
 
-Fluent is a general-purpose Layer 2 rollup that brings web2's favorite execution environment (Wasm) onto web3's most permissionless blockchain, Ethereum.&#x20;
+Fluent is a general-purpose Layer 2 blockchain that brings web2's favorite execution environment (Wasm) onto web3's most permissionless blockchain, Ethereum.&#x20;
 
 ### Build Apps in General-Purpose Languages
 
