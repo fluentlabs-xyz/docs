@@ -18,7 +18,7 @@ A [general-purpose (L2)](https://mirror.xyz/fluentlabs.eth/EyB2e-wqezw2uAaFOsgoJ
 
 Fluent will offer support for a wide range of programming languages that can be compiled into WebAssembly (Wasm).\
 \
-Initially, Fluent will support languages such as Rust, Solidity, and TypeScript, with potential for expansion to other compatible languages in the future.
+Initially, Fluent will support languages such as Rust, Solidity, and Vyper, with potential for expansion to other compatible languages in the future.
 
 </details>
 
