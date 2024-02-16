@@ -6,9 +6,8 @@ Fluent brings [WebAssembly (Wasm)](https://webassembly.org/) to Ethereum.
 
 Wasm is a low-level, portable binary format and compilation target for high-level programming languages.
 
-The above sentence probably doesn't mean much to you, so to better illustrate what Wasm is, its impact on web2 and web3, and to further explore its future potential, we recommend reading more here&#x20;
+The above sentence probably doesn't mean much to you, so to better illustrate what Wasm is, its impact on web2 and web3, and to further explore its future potential, we recommend reading more [here](https://mirror.xyz/fluentlabs.eth/7I4djVRnKFPkxlr2TYkCiMjmPQuE4vyyWIPK5V9l2h0)
 
-{% embed url="https://mirror.xyz/fluentlabs.eth/7I4djVRnKFPkxlr2TYkCiMjmPQuE4vyyWIPK5V9l2h0" fullWidth="false" %}
 
 ### TLDR
 
