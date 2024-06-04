@@ -1,5 +1,0 @@
-# Meta-Verification
-
-Employing a multi-polynomial commitment scheme alone does not lead to sublinear verification, as a linear quantity of equations/identities must be validated for the number of aggregated proofs. However, these identities only involve scalar operations over ℤ𝑝, the native field of Plonk circuits. This observation allows the delegation of the verification of these identities to the prover. They can provide a Plonk proof to demonstrate that the identities hold on the evaluations inside 𝐶𝑜𝑚𝑚𝑖𝑡𝑣, which is the commitment to the evaluations. The multi-polynomial commitment scheme has already assured the validity of 𝐶𝑜𝑚𝑚𝑖𝑡𝑣.&#x20;
-
-Subsequently, the authors demonstrate that an appropriate selection of function 𝐶𝑜𝑚𝑚𝑖𝑡𝐸𝑣𝑎𝑙𝑠 for committing to the evaluations can be effortlessly connected to a Plonk proof without requiring the modeling of the commitment opening with Plonk constraints, and this linkage can be performed outside the circuit. This method is necessary for having a compact meta- verification circuit, which is crucial for maximizing the number of proofs 𝑘 that can be aggregated.
