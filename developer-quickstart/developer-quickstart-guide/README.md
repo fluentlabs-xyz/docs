@@ -1,3 +1,7 @@
+---
+description: Get started building on Fluent
+---
+
 # Developer Quickstart Guide
 
 Fluent allows developers to write smart contracts in Rust, Solidity, or Vyper. Each language has its unique advantages and syntax, enabling developers to choose the best fit for their projects.&#x20;
