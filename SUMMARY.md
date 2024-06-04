@@ -20,12 +20,8 @@
   * [Rust Developer Guide](developer-quickstart/developer-quickstart-guide/rust-developer-guide.md)
   * [Vyper Developer Guide](developer-quickstart/developer-quickstart-guide/vyper-developer-guide.md)
 
-## Dictionary
+## Resources
 
-* [Wikipedia](dictionary/wasm-0-wikipedia.md)
-
-## Get Involved
-
-* [Early Builders Program](https://form.typeform.com/to/ytQi1Pdc)
+* [Wikipedia](resources/wasm-0-wikipedia.md)
+* [Devnet Changelog](resources/devnet-changelog.md)
 * [Community](https://discord.com/invite/cRQSS3NYps)
-* [FAQ](get-involved/faq.md)
