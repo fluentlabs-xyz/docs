@@ -24,4 +24,4 @@
 
 * [Wikipedia](resources/wasm-0-wikipedia.md)
 * [Devnet Changelog](resources/devnet-changelog.md)
-* [Community](https://discord.com/invite/cRQSS3NYps)
+* [Community](https://discord.gg/fluentlabs)
