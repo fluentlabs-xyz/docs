@@ -38,4 +38,4 @@ Select the option that aligns with your preferred programming language for smart
 
 ## Choose your path: Solidity, Rust or Vyper
 
-<table data-view="cards"><thead><tr><th></th><th></th><th></th></tr></thead><tbody><tr><td></td><td><strong>❐ Solidity Smart Contract</strong></td><td></td></tr><tr><td></td><td><strong>❐ Rust Smart Contract</strong></td><td></td></tr><tr><td></td><td><strong>❐ Vyper Smart Contract</strong></td><td></td></tr></tbody></table>
+<table data-view="cards"><thead><tr><th></th><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td></td><td><strong>❐ Solidity Smart Contract</strong></td><td></td><td><a href="solidity-developer-guide.md">solidity-developer-guide.md</a></td></tr><tr><td></td><td><strong>❐ Rust Smart Contract</strong></td><td></td><td><a href="rust-developer-guide.md">rust-developer-guide.md</a></td></tr><tr><td></td><td><strong>❐ Vyper Smart Contract</strong></td><td></td><td><a href="vyper-developer-guide.md">vyper-developer-guide.md</a></td></tr></tbody></table>
