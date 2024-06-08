@@ -7,7 +7,7 @@ description: 'Fluent Developer Preview #02'
 This is the second devnet version of the Fluent chain explicitly designed for deploying and interacting with Wasm-based smart contracts, utilizing a compatible go-Ethereum execution environment.&#x20;
 
 {% hint style="info" %}
-Due to the possible issues in the testnet implementations, we can reset network any time to upgrade it to more stable version.
+Due to the possible issues in the testnet implementations, we can reset the network at any time to upgrade it to a more stable version.
 {% endhint %}
 
 ***
