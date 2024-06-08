@@ -112,7 +112,7 @@ To compile it, simply run:
 
 ### Deploying the Vyper contract
 
-In the `scirpts` folder is the deployment script `deployvyper.js`:
+In the `scripts` folder is the deployment script `deployvyper.js`:
 
 ```javascript
 import { ethers } from 'hardhat';
