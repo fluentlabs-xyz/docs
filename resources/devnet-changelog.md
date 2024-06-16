@@ -16,7 +16,6 @@ _(Private)_
 
 ### Unsupported: <a href="#unsupported" id="unsupported"></a>
 
-*
 * `Fluentbase` framework lacks support for floating-point operations.
 * Standardization of code is pending; thus, passing block/tx context elements inside apps is currently not feasible.
 * Doesn't support Solidity or Vyper for writing smart contracts.
