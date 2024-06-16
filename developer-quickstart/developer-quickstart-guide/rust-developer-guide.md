@@ -14,9 +14,9 @@ Before getting started, ensure you have the following dependencies installed on 
 
 ***
 
-## Install Fluent scaffold CLI tool
+## Install Fluent Scaffold CLI tool
 
-To install the Fluent scaffold CLI tool, simply run the following command in your terminal:
+To install the Fluent scaffold CLI tool, run the following command in your terminal:
 
 ```bash
 cargo install hellofluent
@@ -30,7 +30,7 @@ hellofluent
 
 After installing the Fluent build tool, you can initialize a new project and choose the `Rust` option to bootstrap the starter project.
 
-## Project structure
+## Project Structure
 
 ```
 .
@@ -62,11 +62,11 @@ pub fn main() {
 }
 ```
 
-In this snippet, we can see how easy it is to interact with our VM. We only need to call the SDK, initialize the string, and transform it into bytes, which is the format supported by our VM.
+In this snippet, we can see how easy it is to interact with the Fluent VM. We only need to call the SDK, initialize the string, and transform it into bytes, which is the format supported by rWasm.
 
 ### **Compiling the Rust Smart Contract**
 
-Understanding the deployment process starts with comprehending the role of the Makefile. This file compiles our Rust code into WASM & RWASM and generates the necessary binaries that will be embedded in our tx for deployment
+Understanding the deployment process starts with comprehending the role of the Makefile. This file compiles Rust code into Wasm & rWasm and generates the necessary binaries that will be embedded in a tx for deployment.
 
 <pre class="language-bash"><code class="lang-bash"><strong>make greeting
 </strong></code></pre>
@@ -95,4 +95,4 @@ node deploy-contract.js --dev ./bin/greeting.rwasm
 
 Upon successful deployment, the receipt of your deployment transaction will be displayed, confirming the smart contract deployment on Fluent using the Fluent SDK.
 
-To view your deployed Fluent contract, navigate to the [Fluent Devnet Explorer.](https://blockscout.dev.thefluent.xyz/) From there, you can input your token address to explore your deployed contract on the Fluent Network.
+To view your deployed Fluent contract, navigate to the [Fluent Devnet Explorer.](https://blockscout.dev.thefluent.xyz/) From there, you can input your token address to explore your deployed contract.

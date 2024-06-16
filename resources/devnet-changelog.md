@@ -1,7 +1,5 @@
 ---
-description: >-
-  All notable changes to Fluent's private beta testnet is documented in this
-  section.
+description: All notable changes to Fluent's devnets is documented in this section.
 ---
 
 # Devnet Changelog
@@ -13,14 +11,14 @@ _(Private)_
 ### Added: <a href="#added" id="added"></a>
 
 * `rWasm` (reduced-Wasm) to generate a flattened binary representation of Wasm, ensuring backward compatibility with the Wasm instruction set.
-* `Fluentbase` framework and Rust SDK designed for creating simple WebAssembly (Wasm) applications.
-* `Fluent Network` client with support for Wasm apps.
+* `Fluentbase` framework and Rust SDK designed for creating simple Wasm-based applications.
+* `Fluent Network` client with support for Wasm-based apps.
 
 ### Unsupported: <a href="#unsupported" id="unsupported"></a>
 
-* Modularity is not supported.
-* `Fluentbase` SDK lacks support for floating-point operations.
-* Standardization of code is pending; thus, passing block/tx context elements inside the app is currently not feasible.
+*
+* `Fluentbase` framework lacks support for floating-point operations.
+* Standardization of code is pending; thus, passing block/tx context elements inside apps is currently not feasible.
 * Doesn't support Solidity or Vyper for writing smart contracts.
 
 ***
@@ -33,7 +31,7 @@ _(Priavte)_
 
 * Introduction of a new ABI codec to manage input/output parameters.
 * Inclusion of input capabilities with block and tx context information (block hash, origin, caller, etc.).
-* Full EVM compatibility with support for Solidity and Vyper languages.
+* Full EVM compatibility with support for Solidity and Vyper contracts.
 
 ### Changed: <a href="#changed" id="changed"></a>
 
@@ -51,14 +49,14 @@ _(Current / Public)_
 
 ### Added <a href="#added-2" id="added-2"></a>
 
-* Introduction of Compatibility Contracts that brings support of forkless upgradable Wasm and EVM environments, allowing integration of additional execution runtimes like MoveVM and RISC-V.
+* Introduction of the Compatibility Contracts (CCs) providing support for forkless and upgradable Wasm and EVM environments. The CCs are extensible to additional execution runtimes like MoveVM and RISC-V in the future.
 * L1/L2 messaging between Ethereum testnet and the Fluent network.
-* The new version of rWASM VM and compiler reduces compilation time, binary size, and execution time, while also addressing critical bug fixes.
-  * It achieves 99% compliance with the official WebAssembly spec, with the exception of a few complex corner cases involving import tables and export globals that our execution environment cannot support.
-* Interoperability between EVM and Wasm apps though Compatibility Contracts.
+* The new version of the rWASM VM and compiler reducing compilation time, binary size, and execution time, while also addressing critical bug fixes.&#x20;
+  * It achieves 99% compliance with the official Wasm spec, with the exception of a few complex edge cases involving import tables and export globals that the execution environment cannot support.
+* Interoperability between EVM and Wasm-based apps though the CCs.
 
 ### Changed <a href="#changed-1" id="changed-1"></a>
 
 * Updated to the latest version of revm/reth.
 * Introduced a new codec for ABI encoding.
-* Revised deployment scheme.
+* Revised the deployment scheme.

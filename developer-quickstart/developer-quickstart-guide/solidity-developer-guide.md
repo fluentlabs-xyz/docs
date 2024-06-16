@@ -9,9 +9,9 @@ Before getting started, make sure to install the following:
 
 ***
 
-## Install Fluent scaffold CLI tool
+## Install Fluent Scaffold CLI Tool
 
-To install the Fluent scaffold CLI tool, simply run the following command in your terminal:
+To install the Fluent scaffold CLI tool, run the following command in your terminal:
 
 ```bash
 cargo install hellofluent
@@ -23,7 +23,7 @@ To create a project, run the following in your terminal:
 hellofluent
 ```
 
-This will prompt you to choose from the available setup options. You can opt for either **Hardhat JavaScript or TypeScript**; in this guide, we'll proceed with **JavaScript**.
+This will prompt you to choose from the available setup options. You can opt for either **Hardhat, JavaScript or TypeScript**; in this guide, we'll proceed with **JavaScript**.
 
 ## **Project Structure**
 
@@ -49,7 +49,7 @@ npm install
 
 ### Hardhat Configs
 
-To first get a quick sense of Fluent network’s parameters, head over to the `hardhat.config.js` file in the root directory.&#x20;
+To first get a quick sense of Fluent's network parameters, head over to the `hardhat.config.js` file in the root directory.&#x20;
 
 You will find the configuration for connecting to the Fluent Devnet.
 
@@ -145,4 +145,4 @@ npm run deploy
 # Token address:
 ```
 
-To view your deployed Fluent contract, navigate to the [Fluent Devnet Explorer](https://blockscout.dev.thefluent.xyz/). From there, you can input your token address to explore your deployed contract on the Fluent Network.
+To view your deployed contract on Fluent, navigate to the [Fluent Devnet Explorer](https://blockscout.dev.thefluent.xyz/). From there, you can input your token address to explore your deployed contract.

@@ -11,7 +11,7 @@ Before getting started, make sure to install the following:
 
 ## Install Fluent scaffold CLI tool
 
-To install the Fluent scaffold CLI tool, simply run the following command in your terminal:
+To install the Fluent scaffold CLI tool, run the following command in your terminal:
 
 ```bash
 cargo install hellofluent
@@ -51,7 +51,7 @@ npm install
 
 ### Hardhat Configs
 
-To first get a quick sense of Fluent network’s parameters, head over to the `hardhat.config.js` file in the root directory. You will find the configuration for connecting to the Fluent Devnet.
+To first get a quick sense of Fluent's network parameters, head over to the `hardhat.config.js` file in the root directory. You will find the configuration for connecting to the Fluent Devnet.
 
 ```solidity
 
@@ -112,7 +112,7 @@ To compile it, simply run:
 
 ### Deploying the Vyper contract
 
-In the `scirpts` folder is the deployment script `deployvyper.js`:
+In the `scripts` folder is the deployment script `deployvyper.js`:
 
 ```javascript
 import { ethers } from 'hardhat';
@@ -145,4 +145,4 @@ npm run deploy-vyper
 # Token address:
 ```
 
-To view your deployed Fluent contract, navigate to the [Fluent Devnet Explorer](https://blockscout.dev.thefluent.xyz/). From there, you can input your token address to explore your deployed contract on the Fluent Network.
+To view your deployed Fluent contract, navigate to the [Fluent Devnet Explorer](https://blockscout.dev.thefluent.xyz/). From there, you can input your token address to explore your deployed contract.

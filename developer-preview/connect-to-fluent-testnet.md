@@ -4,10 +4,10 @@ description: 'Fluent Developer Preview #02'
 
 # Connect to Fluent Testnet
 
-This is the second devnet version of the Fluent chain explicitly designed for deploying and interacting with Wasm-based smart contracts, utilizing a compatible go-Ethereum execution environment.&#x20;
+This is the second devnet version of the Fluent L2 explicitly designed for deploying and interacting with Wasm-based smart contracts, utilizing a compatible go-Ethereum execution environment.
 
 {% hint style="info" %}
-Due to the possible issues in the testnet implementations, we can reset network any time to upgrade it to more stable version.
+Due to possible issues in testnet implementations, we can reset the network any time to upgrade it to a more stable version.
 {% endhint %}
 
 ***
@@ -24,16 +24,16 @@ Due to the possible issues in the testnet implementations, we can reset network 
 
 ## Supported Languages
 
-Fluentbase SDK currently supports writing smart contracts in:
+The Fluentbase SDK currently supports writing smart contracts in:
 
 * Rust
 * Solidity
 * Vyper
 
-Future iterations will introduce more language support.&#x20;
+Future iterations will introduce more language support.
 
 ## Current Features and Limitations
 
-In this version, the offering includes a basic Reth implementation, where the execution environment is substituted with rWASM. Notably, functionalities such as ZK or Rollup are not available at this stage.&#x20;
+In this version, the offering includes a basic Reth implementation, where the execution environment is substituted with Fluent's VM, rWASM. Rollup and zk functionalities are not available at this stage.&#x20;
 
-It's essential to acknowledge that significant changes might occur in the VM structure, host SDK, and execution layer in subsequent releases.
+It's essential to note that significant changes might occur in the VM structure, host SDK, and execution layer in subsequent releases.
