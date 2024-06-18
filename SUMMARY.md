@@ -9,7 +9,7 @@
 
 ## DEVELOPER PREVIEW
 
-* [Connect to Fluent Testnet](developer-preview/connect-to-fluent-testnet.md)
+* [Connect to Fluent Devnet](developer-preview/connect-to-fluent-devnet.md)
 * [Block Explorer](https://blockscout.dev.thefluent.xyz/)
 * [Fluent Faucet ](https://faucet.dev.thefluent.xyz/)
 
