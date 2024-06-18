@@ -10,7 +10,7 @@ This guide will walk you through creating a `HelloWorld` contract in each of the
 
 ## Get Started
 
-To simplify the setup process, the Fluent project can be bootstrapped using Fluent’s scaffold CLI tool. This tool automates the creation of the project structure and necessary directories for smart contract development.
+To simplify the setup process, your project can be bootstrapped using Fluent’s scaffold CLI tool. This tool automates the creation of the project structure and necessary directories for smart contract development.
 
 ### Install Fluent scaffold CLI tool
 
