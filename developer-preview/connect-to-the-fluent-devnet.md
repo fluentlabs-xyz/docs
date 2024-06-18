@@ -2,12 +2,12 @@
 description: Fluent Public Devnet
 ---
 
-# Connect to Fluent Devnet
+# Connect to the Fluent Devnet
 
 This is the second devnet version of the Fluent L2 explicitly designed for deploying and interacting with Wasm-based smart contracts, utilizing a compatible go-Ethereum execution environment.
 
 {% hint style="info" %}
-Due to possible issues in testnet implementations, we can reset the network any time to upgrade it to a more stable version.
+Due to possible issues in devnet implementations, we can reset the network any time to upgrade it to a more stable version.
 {% endhint %}
 
 ***

@@ -1,27 +1,14 @@
-# Overview
+# Fluent Overview
 
-Fluent brings [WebAssembly (Wasm)](https://webassembly.org/) to Ethereum.
+Fluent is the first [blended execution network](https://app.gitbook.com/o/si7slqjslxF3aat1ikyi/s/FC1DMiUuayu0DbwfgkH0/\~/changes/142/introduction/the-fluent-vm). The project encompasses a [zero-knowledge virtual machine](https://app.gitbook.com/o/si7slqjslxF3aat1ikyi/s/FC1DMiUuayu0DbwfgkH0/\~/changes/142/introduction/the-fluent-vm) (zkVM), [Layer-2 network](https://app.gitbook.com/o/si7slqjslxF3aat1ikyi/s/FC1DMiUuayu0DbwfgkH0/\~/changes/142/introduction/the-fluent-l2-network), and [development framework](https://app.gitbook.com/o/si7slqjslxF3aat1ikyi/s/FC1DMiUuayu0DbwfgkH0/\~/changes/142/introduction/the-fluentbase-framework) for building diverse blockchain-based applications on Ethereum.&#x20;
 
-## What is Wasm?
+Fluent’s unique value proposition lies in its ability to:
 
-Wasm is a low-level, portable binary format and compilation target for high-level programming languages.
+* simulate the execution environment (EE) of multiple virtual machines (VMs),&#x20;
+* enabling real-time composability of smart contracts pertaining to different VMs (the EVM, the SVM, Wasm, etc.),
+* and written in various programming languages (e.g., Solidity, Rust, TypeScript),&#x20;
+* on a shared state execution environment.
 
-The above sentence probably doesn't mean much to you, so to better illustrate what Wasm is, its impact on web2 and web3, and to further explore its future potential, we recommend reading more here&#x20;
+Thus, Fluent supports apps from multiple VMs in one state machine, where each contract is atomically composable regardless of which VM it pertains to. This flexibility allows developers to use the best contracts for each component of their applications, facilitating the creation of novel on-chain experiences, such as website frontends, order book based dexs, and AI inference verification.&#x20;
 
-{% embed url="https://mirror.xyz/fluentlabs.eth/7I4djVRnKFPkxlr2TYkCiMjmPQuE4vyyWIPK5V9l2h0" fullWidth="false" %}
-
-### TLDR
-
-Wasm enables developers to program for Ethereum similarly to how they program for the contemporary web today.&#x20;
-
-It enables the use of nearly any general-purpose programming language, such as Rust, TypeScript and more, along with preferred web2 libraries and frameworks.
-
-## How does Fluent use Wasm?
-
-Fluent uses Wasm as the foundation for its L2, zkVM and the framework.&#x20;
-
-Let’s walk through each of these components.
-
-
-
-<table data-column-title-hidden data-view="cards"><thead><tr><th align="center"></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td align="center"><p><strong>Fluent Layer 2</strong> </p><p><strong>Blockchain</strong></p></td><td><a href="introduction/what-is-fluent.md">what-is-fluent.md</a></td></tr><tr><td align="center"><strong>Fluent's Approach to zkWasm</strong></td><td><a href="introduction/introduction-to-fluent-vm.md">introduction-to-fluent-vm.md</a></td></tr><tr><td align="center"><strong>Framework to Build on Fluent</strong></td><td><a href="introduction/build-with-fluentbase.md">build-with-fluentbase.md</a></td></tr></tbody></table>
+<table data-column-title-hidden data-view="cards"><thead><tr><th align="center"></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td align="center"><a href="introduction/the-fluent-vm.md"><strong>The Virtual Machine</strong></a></td><td><a href="introduction/the-fluent-vm.md">the-fluent-vm.md</a></td></tr><tr><td align="center"><p><a href="introduction/the-fluent-l2-network.md"><strong>The Layer 2</strong> </a></p><p><a href="introduction/the-fluent-l2-network.md"><strong>Network</strong></a></p></td><td><a href="introduction/the-fluent-l2-network.md">the-fluent-l2-network.md</a></td></tr><tr><td align="center"><a href="introduction/the-fluentbase-framework.md"><strong>The Development Framework</strong></a></td><td><a href="introduction/the-fluentbase-framework.md">the-fluentbase-framework.md</a></td></tr></tbody></table>
