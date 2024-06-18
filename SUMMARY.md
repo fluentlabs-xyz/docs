@@ -13,12 +13,13 @@
 * [Block Explorer](https://blockscout.dev.thefluent.xyz/)
 * [Fluent Faucet ](https://faucet.dev.thefluent.xyz/)
 
-## Developer Quickstart
+## Developer Guides
 
-* [Developer Quickstart Guide](developer-quickstart/developer-quickstart-guide/README.md)
-  * [Solidity Developer Guide](developer-quickstart/developer-quickstart-guide/solidity-developer-guide.md)
-  * [Rust Developer Guide](developer-quickstart/developer-quickstart-guide/rust-developer-guide.md)
-  * [Vyper Developer Guide](developer-quickstart/developer-quickstart-guide/vyper-developer-guide.md)
+* [Developer Quickstart Guide](developer-guides/developer-quickstart-guide/README.md)
+  * [Solidity Developer Guide](developer-guides/developer-quickstart-guide/solidity-developer-guide.md)
+  * [Rust Developer Guide](developer-guides/developer-quickstart-guide/rust-developer-guide.md)
+  * [Vyper Developer Guide](developer-guides/developer-quickstart-guide/vyper-developer-guide.md)
+* [Building a Blended App](developer-guides/building-a-blended-app.md)
 
 ## Resources
 
