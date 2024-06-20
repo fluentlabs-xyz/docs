@@ -68,53 +68,41 @@ std = [
 `src/lib.rs`
 
 ```rust
-#![cfg_attr(not(feature = "std"), no_std)]
-#![allow(dead_code)]
-
+#![cfg_attr(target_arch = "wasm32", no_std)]
 extern crate alloc;
+extern crate fluentbase_sdk;
 
 use alloc::string::String;
+use fluentbase_sdk::{
+    basic_entrypoint, // macro that allows you to create an entrypoint
+    derive::{router // fn recieves contract input and dispatch it to the relevant methods. In this case, solidity based on the first 4 bytes of the input. 
+    , signature}, // decorator that follows abi encoding
 
-//Imports the sol! macro and associated types from the alloy_sol_types crate, 
-// which is used for Solidity interoperability.
-use alloy_sol_types::{sol, SolCall, SolValue};
+    SharedAPI,
+};
 
-// Imports various types and functions from the fluentbase_sdk crate, 
-// which is used for interacting with the Fluent base SDK.
-use fluentbase_sdk::{ContextReader, LowLevelAPI, LowLevelSDK};
+#[derive(Default)]
+struct ROUTER;
 
-// External func (sol!) for ABI serialization 
-sol! {
-    function greeting() external view returns (string);
+pub trait RouterAPI {
+    fn deploy<SDK: SharedAPI>(&self);
+    fn greeting(&self) -> String; 
+    fn custom_greeting(&self, message: String) -> String;
 }
 
-// Defines a struct GREETING that holds a mutable reference to an ExecutionContext. 
-// The lifetime 'a ensures that the reference is valid as long as the GREETING instance exists.
-struct GREETING;
+#[router(mode = "solidity")] //solidity router to interface with solidity contract
+impl RouterAPI for ROUTER {
+    fn deploy<SDK: SharedAPI>(&self) {
+        // any custom deployment logic here
+    }
 
-//Implements the GREETING struct with a single function greeting 
-// that returns a byte slice (&'static [u8]) containing the ASCII bytes for "Hello".
-impl GREETING {
-    fn greeting() -> &'static [u8] {
-        "Hello".as_bytes()
+    #[signature("function greeting() external returns (string)")]
+    fn greeting(&self) -> String {
+        "Hello".into()
     }
 }
 
-#[cfg(not(feature = "std"))]
-#[no_mangle]
-#[cfg(target_arch = "wasm32")]
-pub extern "C" fn deploy() {}
-
-#[cfg(not(feature = "std"))]
-#[no_mangle]
-#[cfg(target_arch = "wasm32")]
-pub extern "C" fn main() {
-    // Directly call the greeting function
-    let output = GREETING::greeting().to_vec().abi_encode();
-    LowLevelSDK::sys_write(&output);
-}
-
-
+basic_entrypoint!(ROUTER);
 ```
 
 <details>
@@ -124,96 +112,80 @@ pub extern "C" fn main() {
 ## 1. **Attributes and Configuration**:
 
 ```rust
-rustCopy code#![cfg_attr(not(feature = "std"), no_std)]
-#![allow(dead_code)]
-```
-
-* `#![cfg_attr(not(feature = "std"), no_std)]`: This attribute tells the Rust compiler to use the `no_std` environment if the standard library (`std`) is not available. This is often used for environments like Wasm where the standard library is not available.
-* `#![allow(dead_code)]`: This allows unused code (dead code) in the file without generating warnings.
-
-## **2. External Crates**:
-
-```rust
+#![cfg_attr(target_arch = "wasm32", no_std)]
 extern crate alloc;
+extern crate fluentbase_sdk;
 ```
 
-* `extern crate alloc;`: This imports the `alloc` crate, which is used for heap allocation in `no_std` environments.
+* `#![cfg_attr(target_arch = "wasm32", no_std)]`: This attribute tells the Rust compiler that if the target architecture is `wasm32`, the `no_std` attribute should be applied. This means the standard library will not be linked, and only the core library will be used. This is important for WebAssembly (Wasm) targets where the standard library is not available.
+* `extern crate alloc;`: This line imports the `alloc` crate, which provides dynamic memory allocation. This is necessary when `no_std` is used but dynamic memory is still required.
+* `extern crate fluentbase_sdk;`: This line imports the `fluentbase_sdk` crate, which provides the necessary tools and macros to interact with the Fluent network.
 
-## **3. Imports**:
+## **2.** Imports:
 
 ```rust
-alloc::string::String;
-use alloy_sol_types::{sol, SolCall, SolValue};
-use fluentbase_sdk::{ContextReader, ExecutionContext, LowLevelAPI, LowLevelSDK};
+use alloc::string::String; // This imports the String type from the alloc crate.
+
+use fluentbase_sdk::{
+    basic_entrypoint,
+    derive::{router, signature},
+    SharedAPI,
+};
 ```
 
-* `use alloc::string::String;`: Imports the `String` type from the `alloc` crate.
-* `use alloy_sol_types::{sol, SolCall, SolValue};`: Imports the `sol!` macro and associated types from the `alloy_sol_types` crate, which is used for Solidity interoperability.
-* `use fluentbase_sdk::{ContextReader, LowLevelAPI, LowLevelSDK};`: Imports various types and functions from the `fluentbase_sdk` crate, which is used for interacting with the Fluentbase SDK.
+* `use fluentbase_sdk::{ basic_entrypoint, derive::{router, signature}, SharedAPI, };`: This imports the necessary items from the `fluentbase_sdk` crate:
+  * `basic_entrypoint`: A macro to generate the entry point for the contract.
+  * `router` and `signature`: Macros to define contract methods and their signatures.
 
-## **4. Solidity Function Interface**:
+## **3. Main** Code
+
+* `#[derive(Default)]`: This automatically implements the `Default` trait for the `ROUTER` struct.
+* `struct ROUTER;`: This defines an empty struct named `ROUTER`.
+
+### 3.1 RouterAPI Trait
 
 ```rust
-rustCopy codesol! {
-    function greeting() external view returns (string);
+pub trait RouterAPI {
+    fn deploy<SDK: SharedAPI>(&self);
+    fn greeting(&self) -> String; 
+    fn custom_greeting(&self, message: String) -> String;
 }
 ```
 
-* This macro defines an external Solidity function `greeting` that returns a `string`. This function will be used to interface with the Solidity contract.
+* `pub trait RouterAPI`: This defines a public trait named `RouterAPI`.
+* `fn deploy<SDK: SharedAPI>(&self);`: This defines a method `deploy` that takes a reference to `self` and a generic parameter `SDK` that implements the `SharedAPI` trait. This method is intended for custom deployment logic.
+* `fn greeting(&self) -> String;`: This defines a method `greeting` that takes a reference to `self` and returns a `String`. This will be implemented to return the greeting "Hello".
+* `fn custom_greeting(&self, message: String) -> String;`: This defines a method `custom_greeting` that takes a reference to `self` and a `String` parameter `message`, and returns a `String`. This can be used to return a custom greeting message.
 
-## **5. Struct Definition**:
-
-```rust
-struct GREETING;
-```
-
-* Defines a struct `GREETING` that holds a mutable reference to an `ExecutionContext`. The lifetime `'a` ensures that the reference is valid as long as the `GREETING` instance exists.
-
-## **6. Implementation of GREETING**:
+### 3.2 Implementing the RouterAPI Trait for ROUTER
 
 ```rust
-impl GREETING {
-    fn greeting() -> &'static [u8] {
-        "Hello".as_bytes()
+#[router(mode = "solidity")]
+impl RouterAPI for ROUTER {
+    fn deploy<SDK: SharedAPI>(&self) {
+        // Custom deployment logic
+    }
+
+    #[signature("function greeting() external returns (string)")]
+    fn greeting(&self) -> String {
+        "Hello".into()
     }
 }
 ```
 
-* Implements the `GREETING` struct with a single function `greeting` that returns a byte slice (`&'static [u8]`) containing the ASCII bytes for "Hello".
+* `#[router(mode = "solidity")]`: This macro annotation indicates that the `impl` block is defining methods for the `solidity` mode.
+* `impl RouterAPI for ROUTER`: This starts the implementation of the `RouterAPI` trait for the `ROUTER` struct.
+* `fn deploy<SDK: SharedAPI>(&self) { ... }`: This provides an empty implementation for the `deploy` method.
+* `#[signature("function greeting() external returns (string)")]`: This macro annotation specifies the Solidity signature for the `greeting` method, indicating that it is a Solidity function with the signature `function greeting() external returns (string)`.
+* `fn greeting(&self) -> String { "Hello".into() }`: This implements the `greeting` method to return the string "Hello".
 
-## **7. Deploy Function**:
-
-```rust
-#[cfg(not(feature = "std"))]
-#[no_mangle]
-#[cfg(target_arch = "wasm32")]
-pub extern "C" fn deploy() {}
-```
-
-* This is an empty deploy function that will be called when the contract is deployed. The attributes:
-  * `#[cfg(not(feature = "std"))]`: Ensures this function is only compiled in `no_std` environments.
-  * `#[no_mangle]`: Prevents the Rust compiler from changing the name of this function, making it accessible as `deploy` from outside the Rust code.
-  * `#[cfg(target_arch = "wasm32")]`: Ensures this function is only compiled for the `wasm32` architecture.
-
-## **8. Main Function**:
+### 3.3 Basic Entrypoint Macro
 
 ```rust
-rustCopy code#[cfg(not(feature = "std"))]
-#[no_mangle]
-#[cfg(target_arch = "wasm32")]
-pub extern "C" fn main() {
-    let output = GREETING::greeting().to_vec().abi_encode();
-    LowLevelSDK::sys_write(&output);
-}
+basic_entrypoint!(ROUTER);
 ```
 
-* This function is the entry point for the contract execution.
-  * `#[cfg(not(feature = "std"))]`: Ensures this function is only compiled in `no_std` environments.
-  * `#[no_mangle]`: Prevents the Rust compiler from changing the name of this function, making it accessible as `main` from outside the Rust code.
-  * `#[cfg(target_arch = "wasm32")]`: Ensures this function is only compiled for the `wasm32` architecture.
-  * **Inside the function:**
-    * `let output = GREETING::<'_>::greeting().to_vec().abi_encode();`: Calls the `greeting` function, converts the result to a vector of bytes, and ABI encodes it.
-    * `LowLevelSDK::sys_write(&output);`: Uses the `LowLevelSDK` to write the encoded output.
+* `basic_entrypoint!(ROUTER);`: This macro generates the necessary boilerplate code to make the `ROUTER` struct the entry point for the contract. It sets up the required functions for interaction with the Fluent platform.
 
 </details>
 
