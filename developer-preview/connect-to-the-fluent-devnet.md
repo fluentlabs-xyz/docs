@@ -4,10 +4,10 @@ description: Fluent Public Devnet
 
 # Connect to the Fluent Devnet
 
-This is the second devnet version of the Fluent L2 explicitly designed for deploying and interacting with Wasm-based smart contracts, utilizing a compatible go-Ethereum execution environment.
+This is the second devnet version of the Fluent L2, explicitly designed for deploying and interacting with EVM and Rust-based smart contracts. Solidity and Rust contracts can be deployed independently, or call each other as part of a [blended application](https://docs.fluentlabs.xyz/learn/developer-guides/building-a-blended-app) that utilizes both types of contracts.
 
 {% hint style="info" %}
-Due to possible issues in devnet implementations, we can reset the network any time to upgrade it to a more stable version.
+Due to possible issues in devnet implementations, we can reset the network at any time to upgrade it to a more stable version.
 {% endhint %}
 
 ***
