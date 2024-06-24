@@ -45,24 +45,25 @@ The Fluentbase SDK currently supports writing smart contracts in:
 Fluentbase can be used to develop different types of applications; in most cases, the same interface is utilized. Here is one simple application that can be developed using Fluentbase.
 
 ```rust
-#![cfg_attr(target_arch = "wasm32", no_std)] 
+#![cfg_attr(target_arch = "wasm32", no_std)]
 extern crate fluentbase_sdk;
 
 use fluentbase_sdk::{basic_entrypoint, SharedAPI};
 
-#[derive(Default)] 
+#[derive(Default)]
 struct GREETING;
 
-impl GREETING { 
-     fn deploy<SDK: SharedAPI>(&self) { 
-     // any custom deployment logic here 
-     } 
-     fn main<SDK: SharedAPI>(&self) { 
-     // write "Hello, World" message into output 
-     SDK::write("Hello, World".as_bytes()); 
-     } 
+impl GREETING {
+    fn deploy<SDK: SharedAPI>(&self) {
+        // any custom deployment logic here
+    }
+    fn main<SDK: SharedAPI>(&self) {
+        // b"Hello, world": "b" here tells the compiler that the string should be treated as a byte sequence. 
+        // This is called a byte string literal.
+        const HELLO: &[u8] = b"Hello, world";
+        SDK::write(HELLO.as_ptr(), HELLO.len() as u32);
+    }
 }
-
 basic_entrypoint!(GREETING);
 ```
 

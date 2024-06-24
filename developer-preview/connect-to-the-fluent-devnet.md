@@ -14,7 +14,7 @@ Due to possible issues in devnet implementations, we can reset the network at an
 
 ## **Network Parameters**
 
-<table><thead><tr><th width="265">Network Parameters</th><th>Resources</th></tr></thead><tbody><tr><td><strong>Network Name</strong></td><td>Fluent Developer Preview</td></tr><tr><td><strong>RPC URL</strong></td><td><a href="https://rpc.dev.thefluent.xyz/">https://rpc.dev.thefluent.xyz/</a></td></tr><tr><td><strong>Chain ID</strong></td><td>1337</td></tr><tr><td><strong>Symbol</strong></td><td>WZT</td></tr></tbody></table>
+<table><thead><tr><th width="265">Network Parameters</th><th>Resources</th></tr></thead><tbody><tr><td><strong>Network Name</strong></td><td>Fluent Developer Preview</td></tr><tr><td><strong>RPC URL</strong></td><td><a href="https://rpc.dev.thefluent.xyz/">https://rpc.dev.thefluent.xyz/</a></td></tr><tr><td><strong>Chain ID</strong></td><td>20993</td></tr><tr><td><strong>Symbol</strong></td><td>WZT</td></tr></tbody></table>
 
 ## Fluent Developer Preview Resources
 

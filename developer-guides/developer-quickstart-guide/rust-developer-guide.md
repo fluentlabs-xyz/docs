@@ -34,32 +34,43 @@ After installing the Fluent build tool, you can initialize a new project and cho
 
 ```
 .
-├── Cargo.lock
 ├── Cargo.toml
 ├── Makefile
 ├── deployor
 │   ├── deployor.js
 │   └── package.json
 ├── src
-│   ├── greeting.rs
-│   └── lib.rs
-└── stack.s
+│   ├── lib.rs
+└── 
 ```
 
 ## Getting Started
 
-For this guide, we will be working with the `greeting.rs` file located in the `src` folder.
+For this guide, we will be working with the `lib.rs` file located in the `src` folder.
 
-`src/greeting.rs`
+`src/lib.rs`
 
 ```rust
-use fluentbase_sdk::{LowLevelAPI, LowLevelSDK};
+#![cfg_attr(target_arch = "wasm32", no_std)]
+extern crate fluentbase_sdk;
 
-pub fn deploy() {}
+use fluentbase_sdk::{basic_entrypoint, SharedAPI};
 
-pub fn main() {
-    LowLevelSDK::sys_write("Hello, World".as_bytes());
+#[derive(Default)]
+struct GREETING;
+
+impl GREETING {
+    fn deploy<SDK: SharedAPI>(&self) {
+        // any custom deployment logic here
+    }
+    fn main<SDK: SharedAPI>(&self) {
+        // b"Hello, world": "b" here tells the compiler that the string should be treated as a byte sequence. 
+        // This is called a byte string literal.
+        const HELLO: &[u8] = b"Hello, world";
+        SDK::write(HELLO.as_ptr(), HELLO.len() as u32);
+    }
 }
+basic_entrypoint!(GREETING);
 ```
 
 In this snippet, we can see how easy it is to interact with the Fluent VM. We only need to call the SDK, initialize the string, and transform it into bytes, which is the format supported by rWasm.
@@ -68,7 +79,7 @@ In this snippet, we can see how easy it is to interact with the Fluent VM. We on
 
 Understanding the deployment process starts with comprehending the role of the Makefile. This file compiles Rust code into Wasm & rWasm and generates the necessary binaries that will be embedded in a tx for deployment.
 
-<pre class="language-bash"><code class="lang-bash"><strong>make greeting
+<pre class="language-bash"><code class="lang-bash"><strong>make
 </strong></code></pre>
 
 Executing this command compiles the code and produces two files: `greeting.wasm` and `greeting.rwasm` which is utilized for deployment purposes.
@@ -90,7 +101,7 @@ npm install
 Subsequently, run this command to deploy the contract:
 
 ```bash
-node deploy-contract.js --dev ./bin/greeting.rwasm
+node deploy-contract.js --dev ../bin/greeting.wasm
 ```
 
 Upon successful deployment, the receipt of your deployment transaction will be displayed, confirming the smart contract deployment on Fluent using the Fluent SDK.
