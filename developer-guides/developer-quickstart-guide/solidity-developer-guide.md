@@ -64,9 +64,9 @@ require("@nomiclabs/hardhat-vyper");
       networks: {
         fluent_devnet1: {
           url: '<https://rpc.dev.thefluent.xyz/>', 
-          chainId: 1337, 
+          chainId: 20993, 
           accounts : [
-            `0x${"ac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80"}` ], // Replace with the private key of the deploying account
+            `0x${"ADD YOUR PRIVATE KEY HERE"}` ], // Replace with the private key of the deploying account
         },
       },
       solidity: {
@@ -82,8 +82,6 @@ require("@nomiclabs/hardhat-vyper");
 
 Within the `networks` object, you can see the **`fluent_devnet1`** configuration. This specifies the URL to connect to the Fluent Devnet, along with the chain ID and the accounts available for transactions.
 
-> As mentioned in the comments, you should replace the dummy private key provided with either your own private key or the deploying wallet address.\
-> \
 > Use [Fluent Faucet](https://faucet.dev.thefluent.xyz/) to request test tokens.
 
 Next, let's explore how you can compile and deploy your first smart contract to the Fluent Devnet.
