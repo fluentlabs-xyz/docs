@@ -34,6 +34,6 @@ Future iterations will introduce more language support.
 
 ## Current Features and Limitations
 
-In this version, the offering includes a basic Reth implementation, where the execution environment is substituted with Fluent's VM, rWASM. Rollup and zk functionalities are not available at this stage.&#x20;
+In this version, the offering includes a basic Reth implementation, where the execution environment is substituted with Fluent's VM, rWasm. Rollup and zk functionalities are not available at this stage.&#x20;
 
 It's essential to note that significant changes might occur in the VM structure, host SDK, and execution layer in subsequent releases.
