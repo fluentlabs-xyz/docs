@@ -47,7 +47,7 @@ fluentbase-sdk = {git = "https://github.com/fluentlabs-xyz/fluentbase", default-
 
 [lib]
 crate-type = ["cdylib", "staticlib"] #For accessing the C lib
-path = "lib.rs"
+path = "src/lib.rs"
 
 [profile.release]
 lto = true
@@ -72,12 +72,10 @@ std = [
 extern crate alloc;
 extern crate fluentbase_sdk;
 
-use alloc::string::String;
+use alloc::string::{String, ToString};
 use fluentbase_sdk::{
-    basic_entrypoint, // macro that allows you to create an entrypoint
-    derive::{router // fn recieves contract input and dispatch it to the relevant methods. In this case, solidity based on the first 4 bytes of the input. 
-    , signature}, // decorator that follows abi encoding
-
+    basic_entrypoint,
+    derive::{router, signature},
     SharedAPI,
 };
 
@@ -85,23 +83,22 @@ use fluentbase_sdk::{
 struct ROUTER;
 
 pub trait RouterAPI {
-    fn deploy<SDK: SharedAPI>(&self);
-    fn greeting(&self) -> String; 
-    fn custom_greeting(&self, message: String) -> String;
+    fn greeting<SDK: SharedAPI>(&self) -> String;
 }
 
-#[router(mode = "solidity")] //solidity router to interface with solidity contract
+#[router(mode = "solidity")]
 impl RouterAPI for ROUTER {
+    #[signature("function greeting() external returns (string)")]
+    fn greeting<SDK: SharedAPI>(&self) -> String {
+        "Hello".to_string()
+    }
+}
+
+impl ROUTER {
     fn deploy<SDK: SharedAPI>(&self) {
         // any custom deployment logic here
     }
-
-    #[signature("function greeting() external returns (string)")]
-    fn greeting(&self) -> String {
-        "Hello".into()
-    }
 }
-
 basic_entrypoint!(ROUTER);
 ```
 
@@ -109,83 +106,57 @@ basic_entrypoint!(ROUTER);
 
 <summary><strong>Detailed Code Explanation</strong></summary>
 
-## 1. **Attributes and Configuration**:
+#### 1. `#![cfg_attr(target_arch = "wasm32", no_std)]`
 
-```rust
-#![cfg_attr(target_arch = "wasm32", no_std)]
-extern crate alloc;
-extern crate fluentbase_sdk;
-```
+This line is a compiler directive. It specifies that if the target architecture is `wasm32` (WebAssembly 32-bit), the code should be compiled without the standard library (`no_std`). This is necessary for WebAssembly, which doesn't have a full standard library available.
 
-* `#![cfg_attr(target_arch = "wasm32", no_std)]`: This attribute tells the Rust compiler that if the target architecture is `wasm32`, the `no_std` attribute should be applied. This means the standard library will not be linked, and only the core library will be used. This is important for WebAssembly (Wasm) targets where the standard library is not available.
-* `extern crate alloc;`: This line imports the `alloc` crate, which provides dynamic memory allocation. This is necessary when `no_std` is used but dynamic memory is still required.
-* `extern crate fluentbase_sdk;`: This line imports the `fluentbase_sdk` crate, which provides the necessary tools and macros to interact with the Fluent network.
+#### 2. `extern crate alloc;` and `extern crate fluentbase_sdk;`
 
-## **2.** Imports:
+These lines declare external crates (libraries) that the code depends on.
 
-```rust
-use alloc::string::String; // This imports the String type from the alloc crate.
+* `alloc` is a core library that provides heap allocation functionality.
+* `fluentbase_sdk` is the SDK provided by Fluent for writing contracts.
 
-use fluentbase_sdk::{
-    basic_entrypoint,
-    derive::{router, signature},
-    SharedAPI,
-};
-```
+#### 3. `use alloc::string::{String, ToString};`
 
-* `use fluentbase_sdk::{ basic_entrypoint, derive::{router, signature}, SharedAPI, };`: This imports the necessary items from the `fluentbase_sdk` crate:
-  * `basic_entrypoint`: A macro to generate the entry point for the contract.
-  * `router` and `signature`: Macros to define contract methods and their signatures.
+This line imports the `String` and `ToString` types from the `alloc` crate. This is necessary because the standard `std` library, which normally includes these, is not available in `no_std` environments.
 
-## **3. Main** Code
+#### 4. `use fluentbase_sdk::{ basic_entrypoint, derive::{router, signature}, SharedAPI };`
 
-* `#[derive(Default)]`: This automatically implements the `Default` trait for the `ROUTER` struct.
-* `struct ROUTER;`: This defines an empty struct named `ROUTER`.
+This line imports various items from the `fluentbase_sdk` crate:
 
-### 3.1 RouterAPI Trait
+* `basic_entrypoint` is a macro for defining the main entry point of the contract.
+* `router` and `signature` are macros for routing function calls and defining function signatures.
+* `SharedAPI` is a trait that abstracts the API shared between different environments.
 
-```rust
-pub trait RouterAPI {
-    fn deploy<SDK: SharedAPI>(&self);
-    fn greeting(&self) -> String; 
-    fn custom_greeting(&self, message: String) -> String;
-}
-```
+#### 5. `#[derive(Default)] struct ROUTER;`
 
-* `pub trait RouterAPI`: This defines a public trait named `RouterAPI`.
-* `fn deploy<SDK: SharedAPI>(&self);`: This defines a method `deploy` that takes a reference to `self` and a generic parameter `SDK` that implements the `SharedAPI` trait. This method is intended for custom deployment logic.
-* `fn greeting(&self) -> String;`: This defines a method `greeting` that takes a reference to `self` and returns a `String`. This will be implemented to return the greeting "Hello".
-* `fn custom_greeting(&self, message: String) -> String;`: This defines a method `custom_greeting` that takes a reference to `self` and a `String` parameter `message`, and returns a `String`. This can be used to return a custom greeting message.
+This line defines a struct named `ROUTER` and derives a default implementation for it. The `ROUTER` struct will implement the logic for our contract.
 
-### 3.2 Implementing the RouterAPI Trait for ROUTER
+#### 6. `pub trait RouterAPI { fn greeting<SDK: SharedAPI>(&self) -> String; }`
 
-```rust
-#[router(mode = "solidity")]
-impl RouterAPI for ROUTER {
-    fn deploy<SDK: SharedAPI>(&self) {
-        // Custom deployment logic
-    }
+This defines a trait named `RouterAPI` with a single method `greeting`. This method is generic over any type that implements the `SharedAPI` trait and returns a `String`.
 
-    #[signature("function greeting() external returns (string)")]
-    fn greeting(&self) -> String {
-        "Hello".into()
-    }
-}
-```
+#### 7. `#[router(mode = "solidity")] impl RouterAPI for ROUTER { ... }`
 
-* `#[router(mode = "solidity")]`: This macro annotation indicates that the `impl` block is defining methods for the `solidity` mode.
-* `impl RouterAPI for ROUTER`: This starts the implementation of the `RouterAPI` trait for the `ROUTER` struct.
-* `fn deploy<SDK: SharedAPI>(&self) { ... }`: This provides an empty implementation for the `deploy` method.
-* `#[signature("function greeting() external returns (string)")]`: This macro annotation specifies the Solidity signature for the `greeting` method, indicating that it is a Solidity function with the signature `function greeting() external returns (string)`.
-* `fn greeting(&self) -> String { "Hello".into() }`: This implements the `greeting` method to return the string "Hello".
+This block implements the `RouterAPI` trait for the `ROUTER` struct. The `#[router(mode = "solidity")]` attribute indicates that this implementation is for a Solidity-compatible router.
 
-### 3.3 Basic Entrypoint Macro
+**Inside the Implementation:**
 
-```rust
-basic_entrypoint!(ROUTER);
-```
+* `#[signature("function greeting() external returns (string)")]` specifies the function signature in Solidity syntax. This tells the router how to call this function from Solidity.
+* `fn greeting<SDK: SharedAPI>(&self) -> String { "Hello".to_string() }` is the implementation of the `greeting` method, which simply returns the string "Hello".
 
-* `basic_entrypoint!(ROUTER);`: This macro generates the necessary boilerplate code to make the `ROUTER` struct the entry point for the contract. It sets up the required functions for interaction with the Fluent platform.
+#### 8. `impl ROUTER { fn deploy<SDK: SharedAPI>(&self) { // any custom deployment logic here } }`
+
+This block provides an additional method `deploy` for the `ROUTER` struct. This method can include custom deployment logic. Currently, it's an empty placeholder.
+
+#### 9. `basic_entrypoint!(ROUTER);`
+
+This macro invocation sets up the `ROUTER` struct as the main entry point for the contract. It handles necessary boilerplate code for contract initialization and invocation.
+
+### Summary
+
+This Rust code defines a smart contract that will be compiled to WebAssembly. The contract implements a single function `greeting` that returns the string "Hello". The contract is designed to be called from a Solidity environment, showcasing interoperability between different virtual machines. The `basic_entrypoint!` macro ties everything together, making `ROUTER` the entry point for the contract.
 
 </details>
 
@@ -196,19 +167,21 @@ basic_entrypoint!(ROUTER);
 ```makefile
 .DEFAULT_GOAL := all
 
+# Compilation flags
 RUSTFLAGS := '-C link-arg=-zstack-size=131072 -C target-feature=+bulk-memory -C opt-level=z -C strip=symbols'
 
+# Paths to the target WASM file and output directory
 WASM_TARGET := ./target/wasm32-unknown-unknown/release/greeting.wasm
 WASM_OUTPUT_DIR := bin
 WASM_OUTPUT_FILE := $(WASM_OUTPUT_DIR)/greeting.wasm
-WASM_WAT_FILE := $(WASM_OUTPUT_DIR)/greeting.wat
 
+# Commands
 CARGO_BUILD := cargo build --release --target=wasm32-unknown-unknown --no-default-features
 RM := rm -rf
 MKDIR := mkdir -p
 CP := cp
-WASM2WAT := wasm2wat
 
+# Targets
 all: build
 
 build: prepare_output_dir
@@ -218,20 +191,13 @@ build: prepare_output_dir
 	@echo "Copying the wasm file to the output directory..."
 	$(CP) $(WASM_TARGET) $(WASM_OUTPUT_FILE)
 
-	@echo "Converting wasm to wat..."
-	$(WASM2WAT) $(WASM_OUTPUT_FILE) > $(WASM_WAT_FILE)
-
 prepare_output_dir:
 	@echo "Preparing the output directory..."
 	$(RM) $(WASM_OUTPUT_DIR)
 	$(MKDIR) $(WASM_OUTPUT_DIR)
 
-clean:
-	@echo "Cleaning the project..."
-	$(RM) $(WASM_OUTPUT_DIR)
-	$(RM) ./target
 
-.PHONY: all build prepare_output_dir clean
+.PHONY: all build prepare_output_dir 
 ```
 
 ### 1.5 Build the Wasm Project
@@ -274,7 +240,7 @@ npx hardhat
 import { HardhatUserConfig } from "hardhat/types";
 import "hardhat-deploy";
 import "@nomicfoundation/hardhat-toolbox";
-import "./tasks/greeting";
+import "./tasks/greeting"
 
 require("dotenv").config();
 
@@ -286,9 +252,12 @@ const config: HardhatUserConfig = {
     localhost: {
       url: "https://rpc.dev.thefluent.xyz/",
       accounts: [DEPLOYER_PRIVATE_KEY],
+      chainId : 20993,
     },
-    hardhat: {
-      chainId: 1337,
+    dev: {
+      url: "https://rpc.dev.thefluent.xyz/",
+      accounts: [DEPLOYER_PRIVATE_KEY],
+      chainId : 20993,
     },
   },
   solidity: {
@@ -316,14 +285,15 @@ export default config;
 
 ```json
 {
-  "name": "typescript-wasm-project",
+  "name": "blendedapp",
   "version": "1.0.0",
-  "description": "A TypeScript project to deploy Solidity and WASM contracts",
+  "description": "Blended Hello, World",
   "main": "index.js",
   "scripts": {
     "compile": "npx hardhat compile",
     "deploy": "npx hardhat deploy"
-  },
+  }
+  ,
   "devDependencies": {
     "@nomicfoundation/hardhat-ethers": "^3.0.0",
     "@nomicfoundation/hardhat-toolbox": "^5.0.0",
