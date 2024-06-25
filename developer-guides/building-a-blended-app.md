@@ -554,7 +554,7 @@ Run the following commands to compile and deploy your contracts:
 ```bash
 pnpm hardhat compile
 pnpm hardhat deploy
-pnpm hardhat get-greeting --contract "Deployed GreetingWithWorld Contract Address"
+pnpm hardhat get-greeting --contract "Deployed Greeting With World Contract Address"
 
 ```
 
