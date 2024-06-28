@@ -14,13 +14,13 @@ Before getting started, make sure to install the following:
 To install the Fluent scaffold CLI tool, run the following command in your terminal:
 
 ```bash
-cargo install hellofluent
+cargo install gblend
 ```
 
 To create a project, run the following in your terminal:
 
 ```bash
-hellofluent
+gblend
 ```
 
 This will prompt you to choose from the available setup options. You can opt for either **Hardhat, JavaScript or TypeScript**; in this guide, we'll proceed with **JavaScript**.

@@ -17,13 +17,13 @@ To simplify the setup process, your project can be bootstrapped using Fluent’s
 To install the Fluent scaffold CLI tool, simply run the following command in your terminal:
 
 ```bash
-cargo install hellofluent
+cargo install gblend
 ```
 
 To create a project, run the following in your terminal:
 
 ```bash
-hellofluent
+gblend
 ```
 
 This will prompt you to choose from the available setup options:
@@ -32,7 +32,7 @@ This will prompt you to choose from the available setup options:
 * Vyper Smart Contract
 * Rust Smart Contract
 
-<figure><img src="../../.gitbook/assets/fluentbuildtool-00 (1).png" alt=""><figcaption><p>Fluent’s scaffold CLI tool</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/gblend.png" alt=""><figcaption><p>Fluent’s scaffold CLI tool</p></figcaption></figure>
 
 Select the option that aligns with your preferred programming language for smart contract development, and the CLI tool will set up the project structure accordingly.
 

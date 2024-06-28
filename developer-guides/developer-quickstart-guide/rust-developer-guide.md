@@ -19,13 +19,13 @@ Before getting started, ensure you have the following dependencies installed on 
 To install the Fluent scaffold CLI tool, run the following command in your terminal:
 
 ```bash
-cargo install hellofluent
+cargo install gblend
 ```
 
 To create a project, run the following in your terminal:
 
 ```bash
-hellofluent
+gblend
 ```
 
 After installing the Fluent build tool, you can initialize a new project and choose the `Rust` option to bootstrap the starter project.
