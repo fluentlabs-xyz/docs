@@ -36,8 +36,8 @@ After installing the Fluent build tool, you can initialize a new project and cho
 .
 ├── Cargo.toml
 ├── Makefile
-├── deployor
-│   ├── deployor.js
+├── deployer
+│   ├── deployer.js
 │   └── package.json
 ├── src
 │   ├── lib.rs
@@ -86,10 +86,10 @@ Executing this command compiles the code and produces two files: `greeting.wasm`
 
 ### **Deploying the Contract**
 
-To initiate deployment, navigate to the `deployor` directory using the following command:
+To initiate deployment, navigate to the `deployer` directory using the following command:
 
 ```bash
-cd deployor
+cd deployer
 ```
 
 Once there, execute the following command to install any dependencies:
