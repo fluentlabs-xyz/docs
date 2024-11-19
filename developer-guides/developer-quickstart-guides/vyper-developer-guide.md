@@ -37,8 +37,8 @@ You can opt for either **Hardhat JavaScript or TypeScript**; in this guide, we'l
 ├── hardhat.config.js (contains Fluent devnet config and plugins)
 ├── package.json
 └── scripts
-    ├── deploy.js 
-    └── deployvyper.js (deployment script for vyper smart contract)
+    ├── deploy-solidity.js 
+    └── deploy-vyper.js (deployment script for vyper smart contract)
 ```
 
 ## Getting Started
@@ -54,7 +54,6 @@ npm install
 To first get a quick sense of Fluent's network parameters, head over to the `hardhat.config.js` file in the root directory. You will find the configuration for connecting to the Fluent Devnet.
 
 ```solidity
-
 require("@nomiclabs/hardhat-ethers");
 require("@nomiclabs/hardhat-vyper");
     /**
@@ -63,7 +62,7 @@ require("@nomiclabs/hardhat-vyper");
     module.exports = {
       networks: {
         fluent_devnet1: {
-          url: '<https://rpc.dev.thefluent.xyz/>', 
+          url: 'https://rpc.dev.gblend.xyz/', 
           chainId: 20993, 
           accounts : [
             `0x${"ADD YOUR PRIVATE KEY HERE"}` ], // Replace with the private key of the deploying account
@@ -77,7 +76,6 @@ require("@nomiclabs/hardhat-vyper");
       },
     };
   
-
 ```
 
 Within the `networks` object, you can see the `fluent_devnet1` configuration. This specifies the URL to connect to the Fluent Devnet, along with the chain ID and the accounts available for transactions.
@@ -113,34 +111,48 @@ To compile it, simply run:
 In the `scripts` folder is the deployment script `deployvyper.js`:
 
 ```javascript
-import { ethers } from 'hardhat';
-async function main() {
-    const [deployer] = await ethers.getSigners();
-  
-    console.log("Deploying contracts with the account:", deployer.address);
-  
-    const Token = await ethers.getContractFactory("hello-v");
-    const token = await Token.deploy();
+const { ethers } = require("hardhat");
 
-    console.log("Token address:", token.address);
+async function main() {
+  const [deployer] = await ethers.getSigners();
+  const network = await ethers.provider.getNetwork();
+
+  console.log("Deploying contract...");
+  console.log("Chain ID:", network.chainId);
+  console.log("Deployer address:", deployer.address);
+  console.log(
+    "Deployer balance:",
+    ethers.utils.formatEther(await deployer.getBalance()),
+    "ETH"
+  );
+
+  const Token = await ethers.getContractFactory("hello-v");
+  const token = await Token.deploy();
+
+  // Access the address property directly
+  console.log("Token address:", token.address);
 }
 
 main()
-    .then(() => process.exit(0))
-    .catch((error) => {
-        console.error(error);
-        process.exit(1);
-    });
+  .then(() => process.exit(0))
+  .catch((error) => {
+    console.error(error);
+    process.exit(1);
+  });
+
+
 
 ```
 
 To deploy the compiled Vyper smart contract, run:
 
-```bash
-npm run deploy-vyper
+<pre class="language-bash"><code class="lang-bash">npx hardhat run scripts/deploy-vyper.js --network fluent_devnet1
 
-# Deploying contracts with the account: 
-# Token address:
-```
+<strong># Deploying contract...
+</strong># Chain ID: 20993
+# Deployer address: 
+# Deployer balance:
+# Contract address: 
+</code></pre>
 
-To view your deployed Fluent contract, navigate to the [Fluent Devnet Explorer](https://blockscout.dev.thefluent.xyz/). From there, you can input your token address to explore your deployed contract.
+To view your deployed Fluent contract, navigate to the [Fluent Devnet Explorer](https://blockscout.dev.gblend.xyz/). From there, you can input your token address to explore your deployed contract.

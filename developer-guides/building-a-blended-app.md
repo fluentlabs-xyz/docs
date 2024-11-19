@@ -20,6 +20,24 @@ Ensure you have the following installed:
 * Hardhat
 * pnpm (install via npm: `npm install -g pnpm`)
 
+{% hint style="info" %}
+NOTE: you can setting up your first blended app wtih `gblend init` cli as well!
+{% endhint %}
+
+## Install Fluent Scaffold CLI Tool
+
+To install the Fluent scaffold CLI tool, run the following command in your terminal:
+
+```bash
+cargo install gblend
+```
+
+To create a project, run the following in your terminal:
+
+```bash
+gblend init
+```
+
 ***
 
 ## Step 1: Initialize Your Rust Project
@@ -91,7 +109,7 @@ pub trait RouterAPI {
 impl<SDK: SharedAPI> RouterAPI for ROUTER<SDK> {
     #[function_id("greeting()")]
     fn greeting(&self) -> String {
-        "Hello,".to_string()
+        "Hello".to_string()
     }
 }
 
@@ -163,52 +181,12 @@ This Rust code defines a smart contract that will be compiled to WebAssembly. Th
 
 </details>
 
-### 1.4 Create a Makefile
-
-`Makefile`
-
-```makefile
-.DEFAULT_GOAL := all
-
-# Compilation flags
-RUSTFLAGS := '-C link-arg=-zstack-size=131072 -C target-feature=+bulk-memory -C opt-level=z -C strip=symbols'
-
-# Paths to the target WASM file and output directory
-WASM_TARGET := ./target/wasm32-unknown-unknown/release/greeting.wasm
-WASM_OUTPUT_DIR := bin
-WASM_OUTPUT_FILE := $(WASM_OUTPUT_DIR)/greeting.wasm
-
-# Commands
-CARGO_BUILD := cargo build --release --target=wasm32-unknown-unknown --no-default-features
-RM := rm -rf
-MKDIR := mkdir -p
-CP := cp
-
-# Targets
-all: build
-
-build: prepare_output_dir
-	@echo "Building the project..."
-	RUSTFLAGS=$(RUSTFLAGS) $(CARGO_BUILD)
-
-	@echo "Copying the wasm file to the output directory..."
-	$(CP) $(WASM_TARGET) $(WASM_OUTPUT_FILE)
-
-prepare_output_dir:
-	@echo "Preparing the output directory..."
-	$(RM) $(WASM_OUTPUT_DIR)
-	$(MKDIR) $(WASM_OUTPUT_DIR)
-
-
-.PHONY: all build prepare_output_dir 
-```
-
-### 1.5 Build the Wasm Project
+### 1.4 Build the Wasm Project
 
 Run:
 
 ```bash
-make
+gblend build rust -r
 ```
 
 ***
@@ -250,13 +228,8 @@ require("dotenv").config();
 const DEPLOYER_PRIVATE_KEY = process.env.DEPLOYER_PRIVATE_KEY || "";
 
 const config: HardhatUserConfig = {
-  defaultNetwork: "localhost",
+  defaultNetwork: "dev",
   networks: {
-    localhost: {
-      url: "https://rpc.dev.gblend.xyz/",
-      accounts: [DEPLOYER_PRIVATE_KEY],
-      chainId : 20993,
-    },
     dev: {
       url: "https://rpc.dev.gblend.xyz/",
       accounts: [DEPLOYER_PRIVATE_KEY],
@@ -454,15 +427,17 @@ const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
   const { deployer: deployerAddress } = await getNamedAccounts();
 
   console.log("deployerAddress", deployerAddress);
-// Deploy WASM Contract
+  // Deploy WASM Contract
   console.log("Deploying WASM contract...");
-  const wasmBinaryPath = "./greeting/bin/greeting.wasm";
+  const wasmBinaryPath = "./greeting/lib.wasm";
+
+  // @ts-ignore
   const provider = new ethers.JsonRpcProvider(network.config.url);
   const deployer = new ethers.Wallet(DEPLOYER_PRIVATE_KEY, provider);
 
   const checkmateValidatorAddress = await deployWasmContract(wasmBinaryPath, deployer, provider, getOrNull, save);
 
-//Deploy Solidity Contract
+  //Deploy Solidity Contract
   console.log("Deploying GreetingWithWorld contract...");
   const fluentGreetingContractAddress = checkmateValidatorAddress;
 
@@ -557,8 +532,7 @@ Run the following commands to compile and deploy your contracts:
 ```bash
 pnpm hardhat compile
 pnpm hardhat deploy
-pnpm hardhat get-greeting --contract "Deployed Greeting With World Contract Address"
-
+pnpm hardhat get-greeting --contract <CONTRACT_ADDRESS>
 ```
 
 [^1]: Is there supposed to be an "I" at the beginning?

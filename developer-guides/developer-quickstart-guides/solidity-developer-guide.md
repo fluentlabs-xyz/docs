@@ -20,7 +20,7 @@ cargo install gblend
 To create a project, run the following in your terminal:
 
 ```bash
-gblend
+gblend init
 ```
 
 This will prompt you to choose from the available setup options. You can opt for either **Hardhat, JavaScript or TypeScript**; in this guide, we'll proceed with **JavaScript**.
@@ -30,18 +30,18 @@ This will prompt you to choose from the available setup options. You can opt for
 ```
 .
 ├── contracts
-│   ├── hello.sol (contains our solidity hello world smart contract)
-│   └── hello-v.vy
+│   ├── hello.sol (our solidity hello world smart contract)
+│   └── hello-v.vy 
 ├── hardhat.config.js (contains Fluent devnet config and plugins)
 ├── package.json
 └── scripts
-    ├── deploy.js (deployment script for solidity smart contract)
-    └── deployvyper.js
+    ├── deploy-solidity.js (deployment script for solidity smart contract)
+    └── deploy-vyper.js
 ```
 
 ## Getting Started
 
-Before we interact with our `helloworld` smart contract, run the below command to install all dependencies in the `package. json` file.
+Before we interact with our `helloworld` smart contract, run the below command to install all dependencies in the `package.json` file.
 
 ```bash
 npm install
@@ -63,7 +63,7 @@ require("@nomiclabs/hardhat-vyper");
     module.exports = {
       networks: {
         fluent_devnet1: {
-          url: '<https://rpc.dev.thefluent.xyz/>', 
+          url: 'https://rpc.dev.gblend.xyz/', 
           chainId: 20993, 
           accounts : [
             `0x${"ADD YOUR PRIVATE KEY HERE"}` ], // Replace with the private key of the deploying account
@@ -82,7 +82,7 @@ require("@nomiclabs/hardhat-vyper");
 
 Within the `networks` object, you can see the **`fluent_devnet1`** configuration. This specifies the URL to connect to the Fluent Devnet, along with the chain ID and the accounts available for transactions.
 
-> Use [Fluent Faucet](https://faucet.dev.thefluent.xyz/) to request test tokens.
+> Use [Fluent Faucet](https://faucet.dev.gblend.xyz/) to request test tokens.
 
 Next, let's explore how you can compile and deploy your first smart contract to the Fluent Devnet.
 
@@ -94,7 +94,7 @@ If you take a look in the `contracts/` folder, you'll see `hello.sol` file:
 // SPDX-License-Identifier: MIT
     pragma solidity ^0.8.0;
     contract Hello {
-        function main() public pure returns (string memory) {
+        function greeting() public pure returns (string memory) {
             return "Hello, Solidity!";
         }
     }
@@ -108,39 +108,51 @@ To compile it, simply run:
 
 ### Deploying the Solidity contract
 
-In the `scirpts` folder is the deployment script `deploy.js`:
+In the `scripts` folder is the deployment script `deploy-solidity.js`:
 
 ```javascript
 const { ethers } = require("hardhat");
 
 async function main() {
-    const [deployer] = await ethers.getSigners();
-  
-    console.log("Deploying contracts with the account:", deployer.address);
-  
-    const Token = await ethers.getContractFactory("Hello");
-    const token = await Token.deploy();
+  const [deployer] = await ethers.getSigners();
+  const network = await ethers.provider.getNetwork();
 
-    // Access the address property directly
-    console.log("Token address:", token.address);
+  console.log("Deploying contract...");
+  console.log("Chain ID:", network.chainId);
+  console.log("Deployer address:", deployer.address);
+  console.log(
+    "Deployer balance:",
+    ethers.utils.formatEther(await deployer.getBalance()),
+    "ETH"
+  );
+
+  const Token = await ethers.getContractFactory("Hello");
+  const token = await Token.deploy();
+
+  // Access the address property directly
+  console.log("Token address:", token.address);
 }
 
 main()
-    .then(() => process.exit(0))
-    .catch((error) => {
-        console.error(error);
-        process.exit(1);
-    });
+  .then(() => process.exit(0))
+  .catch((error) => {
+    console.error(error);
+    process.exit(1);
+  });
+
 
 ```
 
 To deploy the compiled solidity smart contract, run:
 
 ```bash
-npm run deploy
+npx hardhat run scripts/deploy-solidity.js --network fluent_devnet1
 
-# Deploying contracts with the account: 
-# Token address:
+# Deploying contract...
+# Chain ID: 20993
+# Deployer address: 
+# Deployer balance:
+# Contract address: 
 ```
 
-To view your deployed contract on Fluent, navigate to the [Fluent Devnet Explorer](https://blockscout.dev.thefluent.xyz/). From there, you can input your token address to explore your deployed contract.
+To view your deployed contract on Fluent, navigate to the [Fluent Devnet Explorer](https://blockscout.dev.gblend.xyz/). From there, you can input your token address to explore your deployed contract.

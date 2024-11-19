@@ -26,7 +26,7 @@ cargo install gblend
 To create a project, run the following in your terminal:
 
 ```bash
-gblend
+gblend init rust
 ```
 
 After installing the Fluent build tool, you can initialize a new project and choose the `Rust` option to bootstrap the starter project.
@@ -36,21 +36,15 @@ After installing the Fluent build tool, you can initialize a new project and cho
 ```
 .
 ├── Cargo.toml
-├── Cargo.lock
-├── Makefile
-├── deployer
-│   ├── deployer.js
-│   └── package.json
-├── src
-│   ├── lib.rs
-└── 
+└── lib.rs
+
 ```
 
 ## Getting Started
 
 In this guide, we will be working with the `lib.rs` file located in the `src` folder. The structure for any Rust smart contract will be as follows
 
-`src/lib.rs`
+`lib.rs`
 
 ```rust
 // 1. Set the target to wasm32 and enable no_std for compatibility.
@@ -90,17 +84,17 @@ This snippet shows how simple it is to interact with the Fluent VM: just call th
 
 Understanding the deployment process starts with comprehending the role of the Makefile. This file compiles Rust code into Wasm & rWasm and generates the necessary binaries that will be embedded in a tx for deployment.
 
-<pre class="language-bash"><code class="lang-bash"><strong>make
+<pre class="language-bash"><code class="lang-bash"><strong>gblend build rust -r
 </strong></code></pre>
 
-Executing this command compiles the code and generates a file named `rustsimplesc.wasm` in the `bin` directory.
+Executing this command compiles the code and generates a file named `lib.wasm` in the `bin` directory.
 
 ### **Deploying the Contract**
 
-To deploy, run the `gblend deploy` command from the root directory as follows:
+To deploy contract, use gblend cli:
 
 ```bash
-gblend deploy --private-key "Your private key" ./bin/rustsimplesc.wasm --dev
+gblend deploy --private-key <PRIVATE_KEY> --dev lib.wasm --gas-limit 300000000
 ```
 
 Upon successful deployment, the receipt of your deployment transaction will be displayed, confirming the smart contract deployment on Fluent using the Fluent SDK.
