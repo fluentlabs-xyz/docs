@@ -97,18 +97,12 @@ Executing this command compiles the code and generates a file named `rustsimples
 
 ### **Deploying the Contract**
 
-To initiate deployment, navigate to the `deployer` directory using the following command:
+To deploy, run the `gblend deploy` command from the root directory as follows:
 
 ```bash
-cd deployer
-```
-
-Subsequently, run this command to deploy the contract:
-
-```bash
-node deployer.js --dev ../bin/rustsimplesc.wasm
+gblend deploy --private-key "Your private key" ./bin/rustsimplesc.wasm --dev
 ```
 
 Upon successful deployment, the receipt of your deployment transaction will be displayed, confirming the smart contract deployment on Fluent using the Fluent SDK.
 
-To view your deployed Fluent contract, navigate to the [Fluent Devnet Explorer.](https://blockscout.dev.gblend.xyz/) From there, you can input your token address to explore your deployed contract.
+To view your deployed Fluent contract, navigate to the [Fluent Devnet Explorer.](https://blockscout.dev.gblend.xyz/) From there, you can input your contract address to explore your deployed contract.
