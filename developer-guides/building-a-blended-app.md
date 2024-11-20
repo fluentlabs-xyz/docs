@@ -359,7 +359,7 @@ contract GreetingWithWorld {
 
     function getGreeting() external view returns (string memory) {
         string memory greeting = fluentGreetingContract.greeting();
-        return string(abi.encodePacked(greeting, ", World"));
+        return string(abi.encodePacked(greeting, " World"));
     }
 }
 ```

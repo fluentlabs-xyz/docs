@@ -126,11 +126,11 @@ async function main() {
     "ETH"
   );
 
-  const Token = await ethers.getContractFactory("Hello");
-  const token = await Token.deploy();
+  const ContractFactory = await ethers.getContractFactory("Hello");
+  const contract = await ContractFactory.deploy();
 
   // Access the address property directly
-  console.log("Token address:", token.address);
+  console.log("Contract address:", contract.address);
 }
 
 main()
@@ -139,7 +139,6 @@ main()
     console.error(error);
     process.exit(1);
   });
-
 
 ```
 

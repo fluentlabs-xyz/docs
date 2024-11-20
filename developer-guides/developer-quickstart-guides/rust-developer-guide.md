@@ -26,7 +26,7 @@ cargo install gblend
 To create a project, run the following in your terminal:
 
 ```bash
-gblend init rust
+gblend init
 ```
 
 After installing the Fluent build tool, you can initialize a new project and choose the `Rust` option to bootstrap the starter project.
