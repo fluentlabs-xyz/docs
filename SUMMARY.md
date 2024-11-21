@@ -9,7 +9,7 @@
 * [Connect to the Fluent Devnet](developer-preview/connect-to-the-fluent-devnet.md)
 * [Build with the Fluentbase SDK](developer-preview/build-with-the-fluentbase-sdk.md)
 * [Block Explorer](https://blockscout.dev.gblend.xyz/)
-* [Fluent Faucet ](https://faucet.dev.gblend.xyz/)
+* [Fluent Faucet](https://faucet.dev.gblend.xyz/)
 
 ## Developer Guides
 
@@ -30,4 +30,4 @@
 
 * [Glossary](resources/glossary.md)
 * [Devnet Changelog](resources/devnet-changelog.md)
-* [Community](https://discord.gg/fluentlabs)
+* [Community](https://discord.com/invite/fluentxyz)
