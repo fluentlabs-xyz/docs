@@ -31,3 +31,4 @@
 * [Glossary](resources/glossary.md)
 * [Devnet Changelog](resources/devnet-changelog.md)
 * [Community](https://discord.com/invite/fluentxyz)
+* [Community](https://discord.com/invite/fluentxyz)
