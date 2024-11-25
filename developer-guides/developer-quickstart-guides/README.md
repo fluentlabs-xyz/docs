@@ -23,7 +23,7 @@ cargo install gblend
 To create a project, run the following in your terminal:
 
 ```bash
-gblend
+gblend init
 ```
 
 This will prompt you to choose from the available setup options:
