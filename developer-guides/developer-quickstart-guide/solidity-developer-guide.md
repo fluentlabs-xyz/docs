@@ -63,7 +63,7 @@ require("@nomiclabs/hardhat-vyper");
     module.exports = {
       networks: {
         fluent_devnet1: {
-          url: '<https://rpc.dev.thefluent.xyz/>', 
+          url: 'https://rpc.dev.thefluent.xyz/', 
           chainId: 20993, 
           accounts : [
             `0x${"ADD YOUR PRIVATE KEY HERE"}` ], // Replace with the private key of the deploying account
