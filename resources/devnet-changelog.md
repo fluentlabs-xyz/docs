@@ -24,7 +24,7 @@ _(Private)_
 
 ## Devnet Version 1 <a href="#devnet-version-1" id="devnet-version-1"></a>
 
-_(Priavte)_
+_(Private)_
 
 ### Added: <a href="#added-1" id="added-1"></a>
 
