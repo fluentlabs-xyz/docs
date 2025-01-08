@@ -21,7 +21,7 @@ Ensure you have the following installed:
 * pnpm (install via npm: `npm install -g pnpm`)
 
 {% hint style="info" %}
-NOTE: you can setting up your first blended app with `gblend init` cli as well!
+NOTE: you can setting up your first blended app wtih `gblend init` cli as well!
 {% endhint %}
 
 ## Install Fluent Scaffold CLI Tool
@@ -379,9 +379,7 @@ contract GreetingWithWorld {
 * Takes an address `_fluentGreetingContractAddress` as a parameter.
 * Initializes the `fluentGreetingContract` with the provided address.
 
-<!---->
-
-* **Function `getGreeting`**:
+- **Function `getGreeting`**:
   * Calls the `greeting` function of the `fluentGreetingContract` to get the greeting message from the Rust contract.
   * Concatenates the greeting message with ", World" using `abi.encodePacked` and returns the resulting string.
 
