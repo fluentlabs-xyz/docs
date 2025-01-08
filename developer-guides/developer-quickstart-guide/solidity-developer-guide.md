@@ -108,7 +108,7 @@ To compile it, simply run:
 
 ### Deploying the Solidity contract
 
-In the `scirpts` folder is the deployment script `deploy.js`:
+In the `scripts` folder is the deployment script `deploy.js`:
 
 ```javascript
 const { ethers } = require("hardhat");
