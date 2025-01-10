@@ -21,7 +21,7 @@ Ensure you have the following installed:
 * pnpm (install via npm: `npm install -g pnpm`)
 
 {% hint style="info" %}
-NOTE: you can setting up your first blended app wtih `gblend init` cli as well!
+NOTE: you can setting up your first blended app with `gblend init` cli as well!
 {% endhint %}
 
 ## Install Fluent Scaffold CLI Tool
