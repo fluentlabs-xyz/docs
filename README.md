@@ -1,6 +1,8 @@
----
-description: The First Blended Execution Network
----
+⚠️ Note: Fluent documentation has moved to this GitHub repo: ⚠️
+
+https://github.com/fluentlabs-xyz/docs-docusaurus
+
+⚠️ Open new pull requests for documentation updates instead. ⚠️
 
 # What is Fluent?
 
